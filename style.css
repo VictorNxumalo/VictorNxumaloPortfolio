@@ -1,165 +1,23 @@
 /* Optimisation Code */
 /* 1. Making sure all images resize properly  */
-img {
-    max-width: 100%;
-    height: auto;
+
+/* Ensure the body fills the entire viewport */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding/border in width calculations */
 }
-/* 2 Ensuring text and layouts adjust for smaller screens */
-@media (max-width: 768px) {
-    h1{
-        font-size: 2rem; 
-    }
-    p{
-        font-size: 1rem;
-    }
-    #BasicInfo img {
-        max-width: 90%;
-    }
-    .navbar-brand {
-        font-size: 1.5rem;
-    }
-    .navbar-link {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 567px) {
-    h1 {
-        font-size: 1rem;
-    }
-    .nav-link {
-        font-size: 1rem;
-    }
-}
-.responsive-img {
-    max-width: 100%; /* Ensure it scales with the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Make it a circle */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-}
-
-
-/* 3. Optimising the Scroll-to-top Button */
-#scrollToTopBtn {
-    height: 50px;
-    width: 50px;
-    display: none; /* Initially hidden */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    background-color: #F39C12;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-
-}
-
-#scrollToTopBtn:hover {
-    transform: scale(1.1);
-}
-
-#scrollToTopBtn.show {
-    display: block; /* Show when scrolling */
-}
-
-/* 4. optimising the navbar */
-.navbar {
-    flex-wrap: wrap;
-}
-
-@media (max-width: 992px) {
-    .navbar-collapse {
-        justify-content: center
-    }
-    .navbar-brand {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    .social-icons-container {
-        display: flex;               /* Align items horizontally */
-        justify-content: center;     /* Center items horizontally */
-        gap: 20px;                   /* Space between the icons */
-        flex-wrap: wrap;             /* Allow items to wrap to the next line on small screens */
-        align-items: center;         /* Align items vertically in the center */
-    }
-    
-    .social-icon {
-        display: block;
-        width: 100px;                /* Set the width of the Lottie animations */
-        height: 100px;               /* Set the height of the Lottie animations */
-    }
-
-
-    .social-icons-container {
-        display: flex;
-        justify-content: space-around; /* Optional, to add spacing between icons */
-        align-items: center; /* Aligns icons vertically centered */
-    }
-    
-    .social-icon {
-        margin: 0 10px; /* Optional, to add spacing between individual icons */
-    }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Styling the download my cv button */
 /* Styling the Download CV Button */
 .download-btn {
-  
+   
     bottom: 20px; /* 20px from the bottom of the viewport */
     right: 20px; /* 20px from the right of the viewport */
     padding: 12px 20px; /* Padding for the button */
     font-size: 16px; /* Font size */
-    
     color: white; /* White text */
     border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline */
@@ -215,6 +73,12 @@ img {
     letter-spacing: 0.05rem;  /* Slightly spaced letters for a modern touch */
     text-transform: uppercase;  /* Adds a tech-savvy vibe */
     color: #ECF0F1; /* Light Gray for brand color */
+    gap: 1.5rem;
+}
+.navbar-brand video {
+    display: inline-block;
+    object-fit: cover; /* Ensures the video fits nicely within its container */
+    vertical-align: middle;
 }
 
 .navbar-brand:hover {
@@ -225,10 +89,11 @@ img {
 /* Navbar Links */
 .nav-link {
     color: #2C3E50;/* Lighter gray for navigation links */
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: 10px 15px;
     text-transform: capitalize;
     transition: color 0.3s ease, padding 0.3s ease;
+    font-family: Space Mono, serif;
 }
 
 .nav-link:hover {
@@ -405,19 +270,20 @@ img {
 /* styling the key strengths section */
 
 /* Key Strengths Section */
-#KeyStrengths {
+#Keystrengths {
     background-color: #F7F9FC;
     padding: 50px 0;
     text-align: center;
 }
 
-#KeyStrengths .section-heading {
+#Keystrengths .section-heading {
     font-size: 2.5rem;
     font-weight: 700;
     color: #2C3E50;
     margin-bottom: 40px;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
+    margin: 20px 0 20px 0;
 }
 
 /* Custom Horizontal Rule */
@@ -948,6 +814,8 @@ a, button, .form-control {
 /* Styling the social media icons section */
 /* Social Media Icons Section */
 .social-icons-container {
+    position: relative;
+    bottom: 20px;
     display: flex;
     justify-content: center; /* Center the icons */
     align-items: center; /* Vertically align icons */

@@ -14,6 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
         href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,32 +30,38 @@
 
 </head>
 
-<body>
+<body style="margin: 0; width: auto; margin-right: 0;">
     <!-- Download my CV button -->
     <!-- Download CV Button -->
-   
-
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
-        <a href="#BasicInfo"><img src="Assets/arrow.png" alt="" height="40px"></a>
+        <a href="#BasicInfo"><img src="Assets/arrow.png" alt="" height="30px"></a>
     </button>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-white navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#" style=" color: #2C3E50;">Portfolio</a>
+            <!-- Nav Brand -->
+            <a class="navbar-brand" href="#" style="color: #2C3E50;">
+                PORTFOLIO
+            </a>
+            
+
+            <!-- Toggler for smaller screens -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span style="background-color: #2C3E50;">
                     <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
                     <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                        background="##FFFFFF" speed="0.30" style="width: 50px; height: 50px" loop autoplay
+                        background="##FFFFFF" speed="0.20" style="width: 50px; height: 50px" loop autoplay
                         direction="-1" mode="normal"></lottie-player>
                 </span>
             </button>
+
+            <!-- Nav Links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="color: #2C3E50;">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-weight:600 ; font-family: Space Mono, serif; gap: 5; color: #2C3E50;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Basic Info</a>
                     </li>
@@ -63,9 +74,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#TechnicalSkills">Technical Skills</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Soft Skills</a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#Education">Education</a>
                     </li>
@@ -76,14 +84,15 @@
                         <a class="nav-link" href="#Certifications">Certifications</a>
                     </li>
                     <li>
-                        <a href="Assets/Resume/Victor Nxumalo`s Resume.pdf" class="btn btn-primary download-btn" target="_blank">
-                            My Resume
-                        </a>
+                        <a href="Assets/Resume/Victor Nxumalo`s Resume.pdf" class="btn btn-primary download-btn"
+                            target="_blank">My Resume</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+   
+    
     <!-- Basic Information -->
     <section id="BasicInfo" class="container my-5">
         <div class="row align-items-center">
@@ -93,7 +102,7 @@
                 <dotlottie-player data-aos="zoom-in" data-aos-duration="1500"
                     src="https://lottie.host/da5991ce-efc0-49dc-b4ca-9b793abe1b8b/om54WtHlVh.json" background="FFB200"
                     speed="0.5" style="width: 100%px; height: 200px;" loop autoplay></dotlottie-player>
-                <h3 class="text-muted" data-aos="fade-right" data-aos-duration="2000">I am a Bcom Information Systems
+                <h3 class="text-muted" data-aos="fade-right" data-aos-duration="2000">I am a BCom Information Systems
                     Graduate</h3>
                 <p style="font-size: 15px;" data-aos="zoom-in" data-aos-duration="2000">I specialize in web development,
                     UX/UI design, and database management. I
@@ -101,26 +110,29 @@
                     new challenges in the tech world.
                 </p>
                 <p data-aos="fade-in" data-aos-duration="2000" class="blockquote"
-                    style="font-family: 'Dancing Script', cursive;">
+                    style="font-family: Space Mono, serif;">
                     "Everyone in this country should learn how to program a computer, because it teaches you how to
                     think."
                 <footer style="padding: 10px;" data-aos="fade-right" data-aos-duration="2000" class="blockquote-footer">
-                     Steve Jobs (Co-founder of Apple)
+                    Steve Jobs (Co-founder of Apple)
+
                     <img src="Assets/stevejobs/image.png" alt="Steve Jobs" class="footer-img" />
                 </footer>
-
-
                 </p>
 
             </div>
             <div class="col-md-6 text-center">
-                <img data-aos="zoom-in" data-aos-duration="2000" src="Assets/vic.jpg" alt="Victor Nxumalo"
-                    class="img-fluid rounded-circle shadow-lg" />
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                    type="module"></script>
+                <dotlottie-player data-aos="fade-in" data-aos-duration="2000" style="object-fit: cover;"
+                    src="https://lottie.host/5d9b7c5e-87b9-4cbe-bc85-87e8947bbbce/PUw14c6c78.lottie"
+                    background="transparent" speed="1" style="width: 600px; height: 600px" loop
+                    autoplay></dotlottie-player>
             </div>
         </div>
     </section>
 
-    <hr class="styled-hr">
+
     <section id="Background" class="container my-5">
         <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading">Background</h1>
         <hr class="styled-hr">
@@ -134,7 +146,7 @@
             dynamic, team-based environments. My core strengths include analytical problem-solving, adaptability, and
             attention to detail, all of which have equipped me to effectively diagnose and resolve technical challenges.
 
-            I am particularly keen on expanding my expertise in network design, cloud computing (specifically AWS and
+            I am particularly keen on expanding my expertise in cloud computing (specifically AWS and
             Azure), and IT service management. I am eager to contribute to innovative IT projects that focus on system
             reliability, network optimization, and troubleshooting, while continuing to grow professionally in emerging
             technologies.
@@ -144,69 +156,84 @@
             organizations that prioritize both technological excellence and business success.
         </p>
     </section>
+    <hr class="styled-hr">
+    <!-- Key Strengths Table -->
+    <div id="KeyStrengths" class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <table style="text-align: center;" id="Keystrenghts" data-aos="fade-up" data-aos-duration="2000"
+                    class="table table-striped table-bordered key-strengths-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1 style="text-align: center;" data-aos="zoom-in" data-aos-duration="2000"> Soft Skills
+                                </h1>
 
-    <!-- Key Strenghts -->
-    <section id="KeyStrengths" class="container my-5">
-        <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading">Soft Skills </h1>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-users"></i>
+                                <ul>
+                                    <li>Creativity</li>
+                                    <li>Excellent Communication</li>
+                                    <li>Time Management</li>
+                                    <li>Adaptability</li>
+                                    <li>Analytical problem-solving</li>
+                                    <li>Attention To Detail</li>
+                                    <li>Critical Thinking</li>
+                                    <li>Collaboration</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
-        <!-- Styled Horizontal Rule -->
-        <hr class="custom-hr">
-
-        <!-- Key Strengths Table -->
-        <table data-aos="fade-up" data-aos-duration="2000"
-            class="table table-striped table-bordered key-strengths-table">
-            <thead>
-                <tr>
-                    <th><i class="fas fa-lightbulb"></i></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><i class="fas fa-users"></i>
-                        <ul>
-                            <li>Creativity</li>
-                            <li>Excellent Communication</li>
-                            <li>Time Management</li>
-                            <li>Adaptability</li>
-                            <li>Analytical problem-solving </li>
-                            <li>attention To Detail</li>
-                            <li>Critical Thinking</li>
-                            <li>Collaboration</li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
 
     <!-- Technical Skills -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                
+               
+                <table style="text-align: center;" id="KeyStrenghts" data-aos="fade-up" data-aos-duration="2000"
+                    class="table table-striped table-bordered key-strengths-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <h1 style="text-align: center;" data-aos="zoom-in" data-aos-duration="2000">TECHNICAL SKILLS
+                                </h1>
+
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-code"></i>
+                                <ul>
+                                    <li> Strong Knowledge of Information Systems</li>
+                                    <li>Proficiency in Programming Languages & OOP</li>
+                                    <li>Database Design & Management Skill</li>
+                                </ul>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
     <!-- Technical Skills -->
 
     <section id="TechnicalSkills" class="container my-5">
         <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading" style="text-align: center;"
-            class="section-heading">TECHNICAL SKILLS</h1>
-        <hr class="styled-hr">
-        <table data-aos="fade-up" data-aos-duration="2000"
-            class="table table-striped table-bordered key-strengths-table">
-            <thead>
-                <tr>
-                    <th><i class="fas fa-lightbulb"></i></th>
-                </tr>
-            </thead>
-            <tbody>
+            class="section-heading"></h1>
+     
 
-                <tr>
-                    <td><i class="fas fa-code"></i>
-                        <ul>
-                            <li> Strong Knowledge of Information Systems</li>
-                            <li>Proficiency in Programming Languages & OOP</li>
-                            <li>Database Design & Management Skill</li>
-                        </ul>
-                    </td>
-
-                </tr>
-            </tbody>
-        </table>
         <div class="row">
             <div data-aos="fade-right" data-aos-duration="2000" class="col-md-6">
 
@@ -282,17 +309,12 @@
         <!-- High School -->
         <div data-aos="fade-down" data-aos-duration="2000" class="card shadow-lg mb-4">
             <div class="card-body">
-                <img style="margin-bottom: 30px; object-fit: cover;" src="Assets/tsakaneext8/image.png" alt=""
-                    height="200px">
-
+                <img style="margin-bottom: 30px; object-fit: cover; width: 100%; height: auto;"
+                    src="Assets/tsakaneext8/image.png" alt="">
                 <h5 class="card-title">High School: Science Education</h5>
-
                 <p>|National Senior Certificate| NQF Level 4| Gauteng, Ekhurhuleni. South Africa (2018 - 2021) </p>
-
-                <p class="card-text">
-                    Focused on science subjects, including Mathematics, Physical Sciences, and Life Sciences, while
-                    achieving strong academic results.
-                </p>
+                <p class="card-text">Focused on science subjects, including Mathematics, Physical Sciences, and Life
+                    Sciences, while achieving strong academic results.</p>
             </div>
             <div class="mt-4" style="padding: 5px;">
                 <h2 class="section-heading">Subjects Studied</h2>
@@ -314,7 +336,7 @@
 
     <!-- Projects Section -->
     <section id="Projects" class="container my-5">
-        <h1 style="text-align: center;" class="section-heading">Projects</h1>
+        <h1 style="text-align: center;" class="section-heading">PROJECTS</h1>
         <hr class="styled-hr">
 
         <!-- Project 1: StudentInsider Web Application -->
@@ -497,40 +519,6 @@
                             Themed Design: Maintained the brand’s colors, fonts, and visuals for consistency.
                         </ul>
                     </div>
-                    <!-- <h5>Project Images</h5> -->
-                    <!-- <div class="projectImages"> -->
-                    <!-- Image Gallery Section -->
-                    <!-- <div class="col-md-12 mb-3">
-                            <img src="Assets/SITE_holdings/image.png" alt="Image 1" class="img-fluid project-img"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                data-bs-img-src="Assets/project-image1.jpg">
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <img src="Assets/project-image2.jpg" alt="Image 2" class="img-fluid project-img"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                data-bs-img-src="Assets/project-image2.jpg">
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <img src="Assets/project-image3.jpg" alt="Image 3" class="img-fluid project-img"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                data-bs-img-src="Assets/project-image3.jpg">
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <img src="Assets/project-image4.jpg" alt="Image 4" class="img-fluid project-img"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                data-bs-img-src="Assets/project-image4.jpg">
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <img src="Assets/project-image5.jpg" alt="Image 5" class="img-fluid project-img"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                data-bs-img-src="Assets/project-image5.jpg">
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <img src="Assets/project-image6.jpg" alt="Image 6" class="img-fluid project-img"
-                                data-bs-toggle="modal" data-bs-target="#imageModal"
-                                data-bs-img-src="Assets/project-image6.jpg">
-                        </div> -->
-                    <!-- </div> -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -544,7 +532,7 @@
     </section>
 
     <!-- Certification Cards -->
-    <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading" style="  font-size: 2.5rem;
+    <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading" style="  font-size: 2rem;
     font-weight: 700;
     color: #2C3E50;
     text-align: center;
@@ -750,32 +738,24 @@
                     Send Me An Email
                 </button>
             </div>
-
-            <!-- Social Media Icons -->
-            <p style="text-align: center;">Connect with me on social media</p>
+        
+        </div>
+       
+        <div style="text-align: center; align-items: center; display: block; gap: 20px;" class="social-icons-container">
+            
+            <a href="https://www.facebook.com/profile.php?id=100079323153502&mibextid=ZbWKwL"
+                target="_blank">
+                FACEBOOK_
+            </a>
+            <a href="https://www.linkedin.com/jobs/view/4104361307" >
+                LINKEDIN_
+            </a>
+            <a href="https://www.instagram.com/_victormkhwanazi?igsh=d2o3cTBkZ3V2ZnRm" >
+                INSTAGRAM_
+            </a>
         </div>
     </footer>
-    <div class="social-icons-container">
-        <a href="https://www.facebook.com/profile.php?id=100079323153502&mibextid=ZbWKwL" class="social-icon" target="_blank">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-            <lottie-player src="https://lottie.host/962990e7-5b93-4840-89b0-03ebb2a556a4/xScJKnuFdQ.json"
-                background="##FFFFFF" speed="1" style="width: 100px; height: 100px" autoplay direction="1"
-                mode="normal"></lottie-player>
-        </a>
-        <a href="https://www.linkedin.com/jobs/view/4104361307" class="social-icon" target="_blank">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-            <lottie-player src="https://lottie.host/b5522c46-afb1-4518-aa56-ed8cd71a3be3/F2o7TH4Qi7.json"
-                background="transparent" speed="1" style="width: 100px; height: 100px" autoplay direction="1"
-                mode="normal"></lottie-player>
-        </a>
-        <a href="https://www.instagram.com/_victormkhwanazi?igsh=d2o3cTBkZ3V2ZnRm" class="social-icon" target="_blank">
-            <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-            <lottie-player src="https://lottie.host/28c31bf5-2456-4152-b5ed-6e97da8f093e/YxTikbgXhR.json"
-                background="##FFFFFF" speed="1" style="width: 100px; height: 100px" autoplay direction="1"
-                mode="normal"></lottie-player>
-        </a>
-    </div>
-    
+
     <!-- Modal for Contact Form -->
     <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -805,7 +785,7 @@
         </div>
     </div>
 
-    
+
     <!--Functionality of the Scroll to top button -->
     <script>
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
@@ -817,7 +797,7 @@
             }
         };
     </script>
-    
+
     <!-- bootstrap Js -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Aos animation JavaScript-->
