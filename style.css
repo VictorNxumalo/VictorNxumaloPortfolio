@@ -1,7 +1,160 @@
+/* Optimisation Code */
+/* 1. Making sure all images resize properly  */
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* 2 Ensuring text and layouts adjust for smaller screens */
+@media (max-width: 768px) {
+    h1{
+        font-size: 2rem; 
+    }
+    p{
+        font-size: 1rem;
+    }
+    #BasicInfo img {
+        max-width: 90%;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-link {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 567px) {
+    h1 {
+        font-size: 1rem;
+    }
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+.responsive-img {
+    max-width: 100%; /* Ensure it scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+/* 3. Optimising the Scroll-to-top Button */
+#scrollToTopBtn {
+    height: 50px;
+    width: 50px;
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #F39C12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+}
+
+#scrollToTopBtn:hover {
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn.show {
+    display: block; /* Show when scrolling */
+}
+
+/* 4. optimising the navbar */
+.navbar {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        justify-content: center
+    }
+    .navbar-brand {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .social-icons-container {
+        display: flex;               /* Align items horizontally */
+        justify-content: center;     /* Center items horizontally */
+        gap: 20px;                   /* Space between the icons */
+        flex-wrap: wrap;             /* Allow items to wrap to the next line on small screens */
+        align-items: center;         /* Align items vertically in the center */
+    }
+    
+    .social-icon {
+        display: block;
+        width: 100px;                /* Set the width of the Lottie animations */
+        height: 100px;               /* Set the height of the Lottie animations */
+    }
+
+
+    .social-icons-container {
+        display: flex;
+        justify-content: space-around; /* Optional, to add spacing between icons */
+        align-items: center; /* Aligns icons vertically centered */
+    }
+    
+    .social-icon {
+        margin: 0 10px; /* Optional, to add spacing between individual icons */
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Styling the download my cv button */
 /* Styling the Download CV Button */
 .download-btn {
-    position: fixed; /* Fix it to the viewport */
+  
     bottom: 20px; /* 20px from the bottom of the viewport */
     right: 20px; /* 20px from the right of the viewport */
     padding: 12px 20px; /* Padding for the button */
