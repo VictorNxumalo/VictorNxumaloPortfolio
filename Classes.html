@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes - Victor Nxumalo</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body style="margin: 0; width: auto; margin-right: 0;">
+
+    <!-- Navigation (Same as other pages) -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-dark">
+        <div class="container-fluid">
+            <!-- Nav Brand -->
+            <!-- Toggler for smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span style="background-color: #2C3E50;">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+                    <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
+                        background="##FFFFFF" speed="0.1" style="width: 50px; height: 50px" loop autoplay direction="-1"
+                        mode="normal"></lottie-player>
+                </span>
+            </button>
+
+
+            <!-- Nav Links -->
+            <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+                <h1 style="font-weight:600 ; font-family: Space Mono, serif; gap: 5; color: #2C3E50;" data-aos= "zoom-in" data-aos-duration="2000" class="section-heading">Line By Line</h1>
+                <ul  class="navbar-nav ms-auto mb-2 mb-lg-0"
+                    style="margin-top: 1px; font-weight:600 ; font-family: Space Mono, serif; gap: 5; color: #2C3E50;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="Assets/Resume/Victor Nxumalo Latest Resume.pdf" class="btn btn-primary download-btn"
+                            target="_blank">My Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Classes Section -->
+    <section id="classes" class="container my-5">
+        
+        <h1 class="hero-heading" data-aos="fade-up" data-aos-duration="1500">  
+            Embark on a Journey of Technical Mastery  
+        </h1>  
+        <p class="hero-subtext" data-aos="fade-up" data-aos-delay="200">  
+            Dive into my curated collection of <span class="text-accent">web development</span>,  
+            <span class="text-accent">JavaScript & Python</span>, and <span class="text-accent">database design & development</span> video classes.  
+        </p>  
+        <style>.hero-heading {  
+            font-family: 'Space Mono', monospace;  
+            color: #2C3E50;  
+            font-size: 2.5rem;  
+            text-align: center;  
+            margin-bottom: 1.5rem;  
+        }  
+        
+        .hero-subtext {  
+            font-family: 'Montserrat', sans-serif;  
+            color: #34495E;  
+            font-size: 1.2rem;  
+            text-align: center;  
+            max-width: 800px;  
+            margin: 0 auto;  
+            line-height: 1.6;  
+        }  
+        
+        .text-accent {  
+            color: #F39C12;  
+            font-weight: 600;  
+        }  </style>
+        <hr class="styled-hr">
+
+        <div class="row g-4">
+            <!-- Video Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1500">
+                <div class="video-card shadow-lg">
+                    <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+                        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                        border-radius: 8px;">
+                            <iframe loading="lazy"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                                src="https://www.canva.com/design/DAGfMmqXm18/t8vttBW3OyhdhIAUvdKSzw/watch?embed"
+                                allowfullscreen="allowfullscreen" allow="fullscreen">
+                            </iframe>
+                    </div>
+                    <div class="video-info p-3">
+                        <h4 data-aos="fade-down" data-aos-duration="2000" class="text-center mb-5" style="font-weight: 500; font-family: Space Mono, serif; gap: 5; color: #2C3E50;" >JS Ep 1: GradeBook Application</h4>
+                        <h2 class="video-duration" style="font-weight: bold;">20 min • Beginner Level</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat for other videos (Add 5 more similar blocks) -->
+
+        </div>
+    </section>
+
+    <!-- Footer (Same as other pages) -->
+    
+
+    <style>
+        /* Custom Classes Page Styles */
+        .video-card {
+            background: transparent;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(44, 62, 80, 0.1);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(44, 62, 80, 0.12);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            height: 0;
+            background: #2C3E50;
+        }
+
+        .video-embed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            background: transparent;
+        }
+
+        .video-title {
+            font-family: 'Space Mono', monospace;
+            color: #2C3E50;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-duration {
+            font-family: 'Montserrat', sans-serif;
+            color: #F39C12;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .video-title {
+                font-size: 1rem;
+            }
+
+            .video-duration {
+                font-size: 0.8rem;
+            }
+
+            .video-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+
+</html>

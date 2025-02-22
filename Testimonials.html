@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Victor Nxumalo</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Montserrat:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <!-- Aos animantion css link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+
+.styled-hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #F39C12, #F39C12 50%, #34495E 50%, #34495E); /* Gradient effect */
+    margin: 40px auto;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+        /* Optimized CSS */
+        .navbar-nav {
+            gap: 1rem;
+        }
+
+        .nav-link {
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+        }
+
+        .testimonials-page {
+            padding: 2rem 0;
+        }
+
+        .testimonial-card {
+            margin: 1rem 0;
+            padding: 1.5rem;
+        }
+
+        .client-avatar {
+            width: 60px;
+            height: 60px;
+            margin-right: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            padding: 0 1rem;
+        }
+
+        .quote-icon {
+            width: 30px;
+            height: 30px;
+            margin: 0 0.5rem;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+
+            .nav-link {
+                font-size: 1rem;
+                padding: 0.5rem;
+                font-family: 'Roboto', sans-serif;
+
+            }
+
+            .testimonial-card {
+                margin: 0.5rem;
+                padding: 1rem;
+            }
+
+            .client-avatar {
+                width: 50px;
+                height: 50px;
+            }
+
+            .testimonial-text {
+                font-size: 0.9rem;
+                padding: 0;
+            }
+
+            .quote-icon {
+                width: 25px;
+                height: 25px;
+            }
+
+            .modal-content {
+                margin: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .client-avatar {
+                margin: 0 auto 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg  bg-white">
+        <div class="container-fluid">
+            <!-- Nav Brand -->
+            <!-- Toggler for smaller screens -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span style="background-color: #2C3E50;">
+                    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
+                    <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
+                        background="##FFFFFF" speed="0.1" style="width: 50px; height: 50px" loop autoplay direction="-1"
+                        mode="normal"></lottie-player>
+                </span>
+            </button>
+
+
+            <!-- Nav Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0"
+                    style="font-family: Space Mono, serif; gap: 5; color: #2C3E50;">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Testimonials.html">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="Assets/Resume/Victor Nxumalo Latest Resume.pdf" class="btn btn-primary download-btn"
+                            target="_blank">My Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Optimized Navbar
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Victor Nxumalo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="index.html" class="btn btn-outline-primary">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="Assets/Resume/Victor Nxumalo Latest Resume.pdf" class="btn btn-primary ms-2"
+                            target="_blank">Resume</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Optimized Testimonials Section -->
+    <h1 data-aos="fade-down" data-aos-duration="2000" class="text-center mb-5" style="font-weight: 500; font-family: Space Mono, serif; gap: 5; color: #2C3E50;"">Client Testimonials</h1>
+    <div data-aos="zoom-in" data-aos-duration="2000" style="display: flex; justify-content: center; align-items: center; min-height: 60vh;">
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+            type="module"></script>
+        <dotlottie-player src="https://lottie.host/4a630aa1-80a3-4e03-af47-8423cd12d818/EZMaSyhg2T.lottie"
+            background="transparent" speed="1" style="width: 800px; height: 800px;" loop autoplay>
+        </dotlottie-player>
+    </div>
+
+
+    <div  data-aos="fade-right" data-aos-duration="2000" class="row">
+        <div  class="col-12 col-lg-8 mx-auto">
+            <div  class="card testimonial-card">
+                <div  class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="Assets/Resume/Testimonials/Cecil Bennett.png" alt="Cecil Bennett"
+                            class="client-avatar rounded-circle">
+                        <div>
+                            <h3 class="mb-0">Cecil Bennett</h3>
+                            <p class="text-muted">Software Engineer, BMW Group</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-content text-center">
+                        <p class="testimonial-text">
+                            <svg class="quote-icon"><!-- ... --></svg>
+                            "Victor's technical expertise transformed our web infrastructure..."
+                            <svg class="quote-icon"><!-- ... --></svg>
+                        </p>
+                        <button style="font-weight: 600; background-color: #F39C12;" class="btn " data-bs-toggle="modal" data-bs-target="#fullTestimonial1">
+                            Read Full Testimonial
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Optimized Modal -->
+    <div  class="modal fade" id="fullTestimonial1">
+        <div  class="modal-dialog modal-dialog-centered">
+            <div style="border: none; background-color: transparent;" class="modal-content">
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%;
+                        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+                        border-radius: 8px; will-change: transform;">
+                            <iframe loading="lazy"
+                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                                src="https://www.canva.com/design/DAGfq4cH_E4/e_0CSuJhR6Grpfycsa-HCA/view?embed"
+                                allowfullscreen="allowfullscreen" allow="fullscreen">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="styled-hr">
+    <!-- Footer -->
+    <footer class="bg-while text-white py-4 mt-5">
+        <div class="text-center mb-4">
+            <button style="font-size: 15px;" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#contactModal">
+                Send Me An Email
+            </button>
+        </div>
+        <!-- Modal for Contact Form -->
+        <div style="color: #2C3E50;" class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="contactModalLabel">Send Me an Email</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="mailto:xolanivictor02@Gmail.com" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Email</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

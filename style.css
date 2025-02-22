@@ -89,8 +89,9 @@ html, body {
 
 /* Navbar Links */
 .nav-link {
+    margin-top: ;
     color: #2C3E50;/* Lighter gray for navigation links */
-    font-size: 1rem;
+    font-size: 1.15rem;
     padding: 10px 15px;
     text-transform: capitalize;
     transition: color 0.3s ease, padding 0.3s ease;
@@ -901,5 +902,122 @@ a, button, .form-control {
     .text-muted + p {
         font-size: 0.9rem; /* Adjust paragraph font size for mobile */
         padding: 15px;
+    }
+}
+   /* Testimonials Specific Styles */
+.testimonial-card {
+    background: #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    margin: 0 auto; /* Center card */
+    max-width: 800px; /* Limit maximum width */
+}
+
+.testimonial-content {
+    padding: 30px;
+    position: relative;
+}
+
+.quote-icon {
+    margin-bottom: 20px;
+    opacity: 0.8;
+    text-align: center; /* Center quote icon */
+}
+
+.testimonial-text {
+    font-family: 'Montserrat', sans-serif;
+    color: #34495E;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: center; /* Center text */
+}
+
+.testimonial-client {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center; /* Center client info */
+    flex-wrap: wrap; /* Allow wrapping on mobile */
+}
+
+.client-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #F39C12;
+    margin: 0 auto 15px; /* Center image */
+}
+
+.client-info {
+    flex: 1;
+    min-width: 250px; /* Prevent text from getting too narrow */
+}
+
+.client-name {
+    font-family: 'Space Mono', monospace;
+    color: #2C3E50;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    text-align: center; /* Center name */
+}
+
+.client-role {
+    font-family: 'Montserrat', sans-serif;
+    color: #F39C12;
+    font-size: 0.95rem;
+    margin: 0;
+    text-align: center; /* Center role */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .testimonial-card {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-content {
+        padding: 25px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .testimonial-client {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .client-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .client-info {
+        text-align: center !important;
+    }
+
+    .client-name {
+        font-size: 2.1rem;
+    }
+
+    .client-role {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    .client-image {
+        width: 100px;
+        height: 100px;
     }
 }
