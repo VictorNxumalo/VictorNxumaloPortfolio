@@ -89,7 +89,7 @@ html, body {
 
 /* Navbar Links */
 .nav-link {
-    margin-top: ;
+    margin-top: 10px;
     color: #2C3E50;/* Lighter gray for navigation links */
     font-size: 1.15rem;
     padding: 10px 15px;
