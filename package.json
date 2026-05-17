@@ -1,0 +1,12 @@
+{
+  "name": "victor-nxumalo-portfolio",
+  "private": true,
+  "description": "Static portfolio for Mlungisi Nxumalo",
+  "scripts": {
+    "optimize:images": "node scripts/dev/optimize-images.js"
+  },
+  "devDependencies": {
+    "imagemin": "^9.0.1",
+    "imagemin-webp": "^8.0.0"
+  }
+}

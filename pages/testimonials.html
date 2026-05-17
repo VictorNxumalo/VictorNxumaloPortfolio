@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Client testimonials for Mlungisi Nxumalo — software engineering and web delivery.">
+  <title>Testimonials | Mlungisi Nxumalo</title>
+  <link rel="icon" href="../Assets/images/profile/victor-avatar.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/portfolio.css">
+  <link rel="stylesheet" href="../styles/secondary-pages.css">
+</head>
+<body class="page-secondary page-secondary--lime">
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__fill"></span></div>
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb ambient-orb--lime" data-parallax="0.06"></div>
+    <div class="ambient-orb ambient-orb--orange" data-parallax="0.04"></div>
+  </div>
+
+  <header class="detail-topbar">
+    <a href="../index.html#more" class="detail-back">← Back to portfolio</a>
+    <span class="detail-topbar__crumb">Social proof · Testimonials</span>
+  </header>
+
+  <main class="secondary-layout">
+    <header class="secondary-hero reveal">
+      <p class="detail-eyebrow">Social proof</p>
+      <h1 class="secondary-hero__title">
+        <span class="solid">Client</span>
+        <span class="ghost">Testimonials</span>
+      </h1>
+      <p class="secondary-hero__lede">Feedback from professionals I have worked with across software and web projects — quality, communication, and delivery under pressure.</p>
+    </header>
+
+    <div class="secondary-grid secondary-grid--testimonials" data-stagger data-stagger-child="fade-up">
+      <article class="testimonial-card" data-animate="scale-up">
+        <div class="testimonial-card__head">
+          <div class="testimonial-card__avatar">
+            <img src="../Assets/images/testimonials/cecil-bennett.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <h2 class="testimonial-card__name">Cecil Bennett</h2>
+            <p class="testimonial-card__role">Software Engineer · BMW Group</p>
+          </div>
+        </div>
+        <p class="testimonial-card__quote">Victor's technical expertise transformed our web infrastructure and his approach to quality and delivery was exceptional.</p>
+        <button type="button" class="secondary-btn" data-testimonial-open aria-controls="testimonialModal">Read full testimonial</button>
+      </article>
+
+      <article class="highlight-card" data-animate="fade-up">
+        <h2 class="highlight-card__title">Work ethic highlights</h2>
+        <ul class="highlight-card__list">
+          <li>Strong ownership from idea to delivery</li>
+          <li>Clear technical communication with stakeholders</li>
+          <li>Reliable execution under changing requirements</li>
+          <li>Business-aware software decision making</li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <div id="testimonialModal" class="secondary-modal" role="dialog" aria-modal="true" aria-labelledby="testimonialModalTitle" hidden>
+    <div class="secondary-modal__panel">
+      <h2 id="testimonialModalTitle" class="visually-hidden">Full testimonial from Cecil Bennett</h2>
+      <button type="button" class="secondary-modal__close" data-testimonial-close aria-label="Close">&times;</button>
+      <div class="secondary-modal__embed">
+        <iframe
+          loading="lazy"
+          title="Cecil Bennett full testimonial"
+          src="https://www.canva.com/design/DAGfq4cH_E4/e_0CSuJhR6Grpfycsa-HCA/view?embed"
+          allowfullscreen
+          allow="fullscreen"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__brand">© <span id="currentYear"></span> <strong>Mlungisi Nxumalo</strong></p>
+      <ul class="site-footer__nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="../Assets/docs/Mlungisi_Nxumalo_CV_Software_Engineer.docx" download>CV</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../scripts/motion.js"></script>
+  <script src="../scripts/site.js"></script>
+</body>
+</html>

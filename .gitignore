@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# OS & editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Cursor / tooling
+.cursor/
+
+# Build & generated assets
+Assets/webp/
+
+# Logs & env
+*.log
+.env
+.env.*
+
+# Office temp files
+~$*

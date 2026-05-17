@@ -1,1382 +1,685 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victor Nxumalo</title>
-    <link rel="icon" href="Assets/vic-removebg-preview.png" type="Image/jpg">
-    <!-- css style sheet link -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <!-- bootstrap link -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+VN:wght@100..400&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <!-- Aos animantion css link -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Loading Screen -->
-    <style>
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #FFFFFF;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-
-        #loading-screen.hidden {
-            display: none;
-        }
-
-        .fade-out {
-            animation: fadeOut 0.5s ease-out forwards;
-        }
-
-        @keyframes fadeOut {
-            to {
-                opacity: 0;
-            }
-        }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mlungisi Nxumalo — IT graduate & software engineer. Power Platform, full-stack development, QA. Johannesburg.">
+  <title>Mlungisi Nxumalo | Software Engineer</title>
+  <link rel="icon" href="Assets/images/profile/victor-avatar.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preconnect" href="https://lottie.host" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/portfolio.css">
+  <link rel="stylesheet" href="styles/secondary-pages.css">
 </head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__fill"></span></div>
+  <div class="ambient-bg" aria-hidden="true">
+    <div class="ambient-orb ambient-orb--orange" data-parallax="0.05"></div>
+    <div class="ambient-orb ambient-orb--lime" data-parallax="0.08"></div>
+    <div class="ambient-orb ambient-orb--dim" data-parallax="0.03"></div>
+  </div>
 
-<body style="margin: 0; width: auto; margin-right: 0;">
+  <nav class="dock-nav" aria-label="Primary">
+    <a href="#home" title="Home" data-nav="home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1V9.5z"/></svg>
+    </a>
+    <a href="#projects" title="Projects" data-nav="projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+    </a>
+    <a href="#experience" title="Experience" data-nav="experience">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+    </a>
+    <a href="#tools" title="Tools" data-nav="tools">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+    </a>
+    <a href="#more" title="More" data-nav="more">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v12M6 12h12"/></svg>
+    </a>
+    <a href="#contact" title="Contact" data-nav="contact">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+    </a>
+  </nav>
 
-    <!-- Loading Screen -->
-    <div id="loading-screen">
-        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-            type="module"></script>
-        <dotlottie-player src="https://lottie.host/bec9465f-4141-417f-92d4-a1da74adccf3/shradSFhCA.lottie"
-            background="transparent" speed="1" style="width: 100%; height: 100%" loop autoplay>
-        </dotlottie-player>
-    </div>
-    <!-- Download CV Button -->
+  <button type="button" class="menu-toggle" id="menuBtn" aria-label="Menu">☰</button>
+  <nav class="mobile-drawer" id="mobileNav" aria-hidden="true">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#tools">Tools</a>
+    <a href="#more">More</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
-        <a href="#BasicInfo"><img src="Assets/arrow.png" alt="" height="30px"></a>
-    </button>
-
-    <nav class="navbar navbar-expand-lg bg-white navbar-light">
-        <div class="container-fluid">
-            <!-- Nav Brand -->
-            <a class="navbar-brand" href="#">
-                <span style="color: #2C3E50; font-family: 'Space Mono', serif; font-weight: 200;">Victor Nxumalo</span>
-            </a>
-
-            <!-- Toggler for smaller screens -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span style="background-color: #2C3E50;">
-                    <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-                    <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                        background="#FFFFFF" speed="0.1" style="width: 50px; height: 50px" loop autoplay direction="-1"
-                        mode="normal">
-                    </lottie-player>
-                </span>
-            </button>
-
-            <!-- Nav Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  mb-2 mb-lg-0"
-                    style="font-weight: 600; font-family: 'Space Mono', serif; gap: 5px; color: #2C3E50;">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#BasicInfo">Basic Info</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Background">Background</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#KeyStrengths">Strengths</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#TechnicalSkills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Testimonials.html">Testimonials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Certifications">Certifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="Assets/Resume/Victor Nxumalo Latest Resume.pdf" class="btn btn-primary download-btn"
-                            target="_blank">
-                            My Resume
-                        </a>
-                    </li>
-                </ul>
-            </div>
+  <div class="site-layout">
+    <aside class="profile-sticky reveal">
+      <article class="profile-card" id="profileCard">
+        <div class="profile-card__deco" aria-hidden="true">
+          <svg viewBox="0 0 400 400" fill="none">
+            <path d="M80 320 Q200 80 360 120" stroke="#ff5c1a" stroke-width="2" stroke-dasharray="6 8" stroke-dashoffset="400" fill="none" opacity="0.35"/>
+            <path d="M40 200 Q180 40 320 200 Q200 360 40 200" stroke="#ff5c1a" stroke-width="1.5" stroke-dasharray="4 10" stroke-dashoffset="400" fill="none" opacity="0.2"/>
+          </svg>
         </div>
-    </nav>
+        <div class="profile-card__photo-wrap">
+          <span class="profile-card__glow" aria-hidden="true"></span>
+          <img
+            src="Assets/images/profile/victor-avatar.png"
+            alt="Mlungisi Nxumalo — IT graduate and software engineer"
+            class="profile-card__photo"
+            width="600"
+            height="750"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </div>
+        <div class="profile-card__body">
+          <svg class="profile-flame" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 23c-3.9-2.3-7-5.5-7-10 0-4.5 3.5-8.5 7-11 3.5 2.5 7 6.5 7 11 0 4.5-3.1 7.7-7 10z"/></svg>
+          <p class="profile-role">Software Engineer · IT Graduate</p>
+          <h2 class="profile-name">Mlungisi Nxumalo</h2>
+          <p class="profile-bio">I build Power Apps, full-stack web systems, and quality-assured software — from tender workflows and voting platforms to esports and event tech.</p>
+          <div class="profile-social">
+            <a href="https://github.com/VictorNxumalo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="mailto:xolanivictor02@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </a>
+            <a href="tel:+27812897693" aria-label="Phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+          <a href="Assets/docs/Mlungisi_Nxumalo_CV_Software_Engineer.docx" class="profile-cv-btn" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+            Download CV
+          </a>
+        </div>
+      </article>
+    </aside>
 
-    <section id="BasicInfo" class="container my-5">
-        <div class="row align-items-center">
-            <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-                type="module"></script>
-            <dotlottie-player data-aos="zoom-in" data-aos-duration="1500"
-                src="https://lottie.host/da5991ce-efc0-49dc-b4ca-9b793abe1b8b/om54WtHlVh.json" background="FFB200"
-                speed="0.5" style="width: 100%px; height: 200px;" loop autoplay></dotlottie-player>
-            <div class="col-md-6 text-center">
-                <h3 class="text-muted" data-aos="fade-right" data-aos-duration="2000">I`m a Software Engineer
-                </h3>
-                <p style="font-size: 15px;" data-aos="zoom-in" data-aos-duration="2000">As a Recent B.Com in Information
-                    Systems graduate from the University of Johannesburg, I am passionate about
-                    leveraging technology to solve complex problems and drive business innovation. My academic
-                    background has
-                    provided me with a strong foundation in IT systems, data analysis, project management, and business
-                    processes, enabling me to bridge the gap between technical infrastructure and organizational needs.
+    <div class="content-column">
+      <section id="home" class="hero-block block">
+        <div class="hero-headline">
+          <canvas class="hero-dust" aria-hidden="true"></canvas>
+          <h1 class="hero-title">
+            <span class="line-solid">Software</span>
+            <span class="line-ghost">Engineer</span>
+          </h1>
+        </div>
+        <div class="hero-body">
+          <p class="hero-eyebrow">Johannesburg · IT Graduate · Building for enterprise &amp; web</p>
+          <p class="hero-desc">Passionate about creating intuitive systems and engaging digital experiences. I specialise in transforming business requirements into beautifully crafted, dependable products.</p>
 
-                    Through hands-on experience in academic projects, I have honed my ability to work collaboratively in
-                    dynamic, team-based environments. My core strengths include analytical problem-solving,
-                    adaptability, and
-                    attention to detail, all of which have equipped me to effectively diagnose and resolve technical
-                    challenges.
+          <div class="hero-metrics" data-stagger>
+            <article class="hero-stat hero-stat--featured" data-animate="scale-up">
+              <span class="hero-stat__badge">NQF 7</span>
+              <div class="hero-stat__num hero-stat__num--degree">BCom</div>
+              <p class="hero-stat__degree">Information Systems</p>
+              <p class="hero-stat__meta">University of Johannesburg · 2022–2024</p>
+            </article>
 
-                    I am committed to learning, collaborating, and delivering meaningful results, ensuring that business
-                    operations are supported by reliable and efficient IT systems. My goal is to play a key role in
-                    organizations that prioritize both technological excellence and business success.
+            <div class="hero-metrics__cluster">
+              <article class="hero-stat hero-stat--compact" data-animate="scale-up">
+                <div class="num" data-count="50" data-prefix="+">0</div>
+                <div class="label">Enterprise<br>Users Served</div>
+              </article>
+              <article class="hero-stat hero-stat--compact" data-animate="scale-up">
+                <div class="num" data-count="7" data-prefix="+">0</div>
+                <div class="label">Projects<br>Delivered</div>
+              </article>
+              <article class="hero-stat hero-stat--compact hero-stat--wide" data-animate="scale-up">
+                <div class="num">NQF4</div>
+                <div class="label">NC IT Learnership · Sun International · 2025</div>
+              </article>
+            </div>
+          </div>
 
-                </p>
-                <p data-aos="fade-in" data-aos-duration="2000" class="blockquote"
-                    style="font-family: Space Mono, serif;">
-                    "Everyone in this country should learn how to program a computer, because it teaches you how to
-                    think."
-                <footer style="padding: 10px;" data-aos="fade-right" data-aos-duration="2000" class="blockquote-footer">
-                    Steve Jobs (Co-founder of Apple)
+          <div class="hero-pills">
+            <div class="skill-pill skill-pill--orange">
+              <div class="skill-pill__pattern" aria-hidden="true"></div>
+            <svg class="skill-pill__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span class="skill-pill__text">Workflow Automation · Power Platform · SharePoint</span>
+          </div>
+            <div class="skill-pill skill-pill--lime">
+              <div class="skill-pill__pattern" aria-hidden="true"></div>
+            <svg class="skill-pill__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            <span class="skill-pill__text">Node.js · Supabase · JavaScript · REST APIs · CI/CD</span>
+          </div>
+        </div>
+        </div>
+      </section>
 
-                    <img src="Assets/stevejobs/image.png" alt="Steve Jobs" class="footer-img" />
-                </footer>
-                </p>
-                <!-- Projects Animation -->
-                <a class="nav-link" href="#Projects"
-                    style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-                        type="module"></script>
-                    <dotlottie-player src="https://lottie.host/bdae9029-2dd8-499f-83ed-5b281b02f302/v7JGbJ3bIn.lottie"
-                        background="transparent" speed="1" style="width: 100%; height: 100%" loop
-                        autoplay></dotlottie-player>
-                    <h1 style="margin-top: 5px; font-weight: 500; font-family: Space Mono, serif; gap: 5; color: #2C3E50;""><strong>Jump straight to my
-                            projects !</strong></p>
+      <div class="marquee-dark reveal" aria-hidden="true">
+        <div class="marquee-dark__track">
+          <div class="marquee-dark__group">
+            <span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Node.js</span><span>Supabase</span><span>QA Testing</span><span>SQL Server</span><span>Redis</span>
+          </div>
+          <div class="marquee-dark__group">
+            <span>Power Apps</span><span>Power Automate</span><span>SharePoint</span><span>Node.js</span><span>Supabase</span><span>QA Testing</span><span>SQL Server</span><span>Redis</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="projects" class="block block--projects">
+        <div class="projects-header reveal">
+          <div class="projects-header__text">
+            <p class="projects-eyebrow">Selected work</p>
+            <h2 class="section-heading section-heading--inline">
+              <span class="solid">Recent</span>
+              <span class="ghost">Projects</span>
+            </h2>
+            <p class="projects-intro">Enterprise automation, full-stack builds, and academic platforms — each with a real business or user outcome.</p>
+          </div>
+          <a href="https://github.com/VictorNxumalo" target="_blank" rel="noopener noreferrer" class="projects-github">
+            <span class="projects-github__count">06</span>
+            View GitHub
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <div class="project-showcase" data-stagger data-stagger-child="fade-up">
+          <div class="project-showcase__lead">
+          <article class="project-card project-card--featured project-card--accent-orange" data-animate="scale-up">
+            <span class="project-card__index" aria-hidden="true">01</span>
+            <div class="project-card__media project-card__media--logo-dark">
+              <img src="Assets/images/projects/evolve-logo.png" alt="EVOLVE esports platform logo" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span>Esports</span><span>Full-Stack</span><span>Node.js</span></div>
+              <h3 class="project-card__title">EVOLVE</h3>
+              <p class="project-card__desc">Esports platform — compete, improve, and inspire. Tournament flow, brackets, and competitive play.</p>
+              <div class="project-card__actions">
+                <a href="https://stirring-capybara-9da21d.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-card__btn project-card__btn--primary">Visit site</a>
+                <a href="https://github.com/VictorNxumalo/warzone.gg" target="_blank" rel="noopener noreferrer" class="project-card__btn project-card__btn--ghost">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <a href="https://victornxumalo.github.io/finalYearProject-StudentInsider-/" target="_blank" rel="noopener noreferrer" class="project-card project-card--highlight project-card--accent-lime" data-animate="scale-up">
+            <span class="project-card__index" aria-hidden="true">02</span>
+            <div class="project-card__media project-card__media--logo-light">
+              <img src="Assets/images/projects/student-insider-logo.png" alt="Student Insider logo" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span>NQF 7</span><span>Final Year</span><span>Web App</span></div>
+              <h3 class="project-card__title">Student Insider</h3>
+              <p class="project-card__desc">Academic hub with tutoring, blogs, career guidance, and admin tooling.</p>
+              <span class="project-card__cta">Live demo</span>
+            </div>
+          </a>
+          </div>
+
+          <div class="project-showcase__grid">
+          <article class="project-card project-card--accent-orange" data-animate="scale-up">
+            <span class="project-card__index" aria-hidden="true">03</span>
+            <div class="project-card__media project-card__media--contain">
+              <img src="Assets/images/projects/site-holdings-logo.png" alt="Tender Scope Management" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span>Power Platform</span><span>SharePoint</span></div>
+              <h3 class="project-card__title">Tender Scope Management</h3>
+              <p class="project-card__desc">Enterprise approval workflows for tender scoping across business units.</p>
+              <span class="project-card__cta project-card__cta--muted">Sun International</span>
+            </div>
+          </article>
+
+          <article class="project-card project-card--accent-lime" data-animate="scale-up">
+            <span class="project-card__index" aria-hidden="true">04</span>
+            <div class="project-card__media project-card__media--contain">
+              <img src="Assets/images/services-icons/coding.png" alt="QR and OTP campaign system" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span>Node.js</span><span>QR / OTP</span></div>
+              <h3 class="project-card__title">QR &amp; OTP Campaign</h3>
+              <p class="project-card__desc">Nedbank Golf Challenge engagement system with secure code validation.</p>
+              <span class="project-card__cta project-card__cta--muted">Enterprise delivery</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-animate="scale-up">
+            <span class="project-card__index" aria-hidden="true">05</span>
+            <div class="project-card__media project-card__media--contain">
+              <img src="Assets/images/misc/information-management.png" alt="Temperature monitoring web application" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span>Web App</span><span>Compliance</span></div>
+              <h3 class="project-card__title">Temperature Monitoring</h3>
+              <p class="project-card__desc">Tracking and reporting for operational compliance requirements.</p>
+              <span class="project-card__cta project-card__cta--muted">Internal tool</span>
+            </div>
+          </article>
+
+          <a href="https://victornxumalo.github.io/The-Telegram/" target="_blank" rel="noopener noreferrer" class="project-card project-card--wide project-card--accent-orange" data-animate="scale-up">
+            <span class="project-card__index" aria-hidden="true">06</span>
+            <div class="project-card__media">
+              <img src="Assets/images/projects/the-telegram/the-telegram-preview.png" alt="The Telegram interactive web experiment" loading="lazy" decoding="async">
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags"><span>Front-End</span><span>Creative</span></div>
+              <h3 class="project-card__title">The Telegram</h3>
+              <p class="project-card__desc">Interactive narrative web experiment with motion and bold layout.</p>
+              <span class="project-card__cta">Live demo</span>
+            </div>
+          </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="block block--experience">
+        <div class="experience-header reveal">
+          <div class="experience-header__text">
+            <p class="experience-eyebrow">Career path</p>
+            <h2 class="section-heading section-heading--inline">
+              <span class="solid">Professional</span>
+              <span class="ghost">Experience</span>
+            </h2>
+            <p class="experience-intro">From enterprise delivery at Sun International to my BCom at UJ — building practical systems and strong foundations in information systems. Select a role to explore project detail.</p>
+          </div>
+        </div>
+
+        <div class="exp-timeline" data-stagger data-stagger-child="fade-up">
+          <a href="pages/experience-sun-international.html" class="exp-card exp-card--current exp-card--link" data-animate="scale-up" aria-label="Sun International learnership — view full details">
+            <div class="exp-card__rail" aria-hidden="true">
+              <span class="exp-card__dot"></span>
+              <span class="exp-card__line"></span>
+            </div>
+            <div class="exp-card__panel">
+              <div class="exp-card__meta">
+                <span class="exp-card__badge">Current role</span>
+                <time class="exp-card__date" datetime="2025-06">Jun 2025 — Present</time>
+              </div>
+              <h3 class="exp-card__company">Sun International</h3>
+              <p class="exp-card__role">IT Learner · NC IT (NQF Level 4)</p>
+              <p class="exp-card__desc">Structured learnership delivering business-facing technology: enterprise Power Apps for 50+ users, Power Automate workflows, Node.js campaign systems, AEM–Umbraco integration, compliance web tools, functional QA on internal apps, and technical support across SharePoint and Office 365.</p>
+              <ul class="exp-card__highlights">
+                <li><strong>14</strong> documented workplace &amp; learner projects</li>
+                <li><strong>Node.js</strong> QR &amp; OTP campaign systems</li>
+                <li><strong>QA</strong> on MVG &amp; Mileage Claim apps</li>
+              </ul>
+              <div class="exp-card__tags">
+                <span class="exp-tag">Power Apps</span>
+                <span class="exp-tag">Power Automate</span>
+                <span class="exp-tag">Node.js</span>
+                <span class="exp-tag">SharePoint</span>
+                <span class="exp-tag">QA Testing</span>
+              </div>
+              <span class="exp-card__cta">View learnership details <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+          <a href="pages/experience-university-johannesburg.html" class="exp-card exp-card--link exp-card--edu" data-animate="scale-up" aria-label="University of Johannesburg — view academic record">
+            <div class="exp-card__rail" aria-hidden="true">
+              <span class="exp-card__dot exp-card__dot--muted"></span>
+            </div>
+            <div class="exp-card__panel">
+              <div class="exp-card__meta">
+                <span class="exp-card__badge exp-card__badge--edu">Education</span>
+                <time class="exp-card__date" datetime="2022-02/2024-11">Feb 2022 — Nov 2024</time>
+              </div>
+              <h3 class="exp-card__company">University of Johannesburg</h3>
+              <p class="exp-card__role">BCom Information Systems · NQF 7</p>
+              <p class="exp-card__desc">Final year 2024: distinctions in IS &amp; Entrepreneurship. Capstone: Student Insider (PRO001). Five passed modules on transcript.</p>
+              <div class="exp-card__tags">
+                <span class="exp-tag exp-tag--lime">Student Insider</span>
+                <span class="exp-tag exp-tag--lime">3 Distinctions</span>
+                <span class="exp-tag exp-tag--lime">90% IS 3B</span>
+              </div>
+              <span class="exp-card__cta exp-card__cta--lime">View academic record <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="tools" class="block block--tools">
+        <div class="tools-header reveal">
+          <div class="tools-header__text">
+            <p class="tools-eyebrow">Tech stack</p>
+            <h2 class="section-heading section-heading--inline">
+              <span class="solid">Premium</span>
+              <span class="ghost">Tools</span>
+            </h2>
+            <p class="tools-intro">Platforms and languages I use daily — from enterprise low-code at Sun International to full-stack builds and QA.</p>
+          </div>
+          <p class="tools-count" aria-label="12 tools listed"><span class="tools-count__num">12</span> tools</p>
+        </div>
+
+        <div class="tools-showcase" data-stagger data-stagger-child="fade-up">
+          <div class="tools-cluster tools-cluster--featured">
+            <div class="tools-cluster__head">
+              <h3 class="tools-cluster__title">Enterprise &amp; low-code</h3>
+              <p class="tools-cluster__desc">Microsoft 365 delivery — apps, automation, and collaboration.</p>
+            </div>
+            <div class="tools-cluster__grid tools-cluster__grid--lead">
+              <article class="tool-card tool-card--featured tool-card--primary tool-card--power-apps" data-animate="scale-up">
+                <span class="tool-card__badge">Primary</span>
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/dc5fd225-cf43-4803-8fe2-af12d840adac/IOtyIBkTAs.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback">Apps</span>
+                </div>
+                <h4 class="tool-card__name">Power Apps</h4>
+                <p class="tool-card__cat">Business Apps</p>
+              </article>
+              <article class="tool-card tool-card--featured tool-card--power-automate" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/24fc9767-fdda-4067-b72c-522509f69b80/8UnC14sJ5X.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback">Flow</span>
+                </div>
+                <h4 class="tool-card__name">Power Automate</h4>
+                <p class="tool-card__cat">Automation</p>
+              </article>
+              <article class="tool-card tool-card--featured tool-card--sharepoint" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/ca141673-cd5e-4fe9-8e09-1998af630d4d/0Psq6uNrzX.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback">SP</span>
+                </div>
+                <h4 class="tool-card__name">SharePoint</h4>
+                <p class="tool-card__cat">Collaboration</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tools-cluster tools-cluster--dev">
+            <div class="tools-cluster__head">
+              <h3 class="tools-cluster__title">Development &amp; data</h3>
+              <p class="tools-cluster__desc">Languages, runtimes, and databases for shipped products.</p>
+            </div>
+            <div class="tools-cluster__grid">
+              <article class="tool-card tool-card--javascript" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/14e22fa2-d696-49f0-8b17-292024eab336/ijVZHz42Qs.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback tool-card__icon--lime">JS</span>
+                </div>
+                <h4 class="tool-card__name">JavaScript</h4>
+                <p class="tool-card__cat">Language</p>
+              </article>
+              <article class="tool-card tool-card--nodejs" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/719dd999-56ad-4ff9-98df-4cc5576064e0/jJczmQeXwK.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback tool-card__icon--lime">N</span>
+                </div>
+                <h4 class="tool-card__name">Node.js</h4>
+                <p class="tool-card__cat">Runtime</p>
+              </article>
+              <article class="tool-card tool-card--python" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/46177c44-7d82-43ce-a90b-f4e645611618/kYDYlIbf7r.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback tool-card__icon--lime">Py</span>
+                </div>
+                <h4 class="tool-card__name">Python</h4>
+                <p class="tool-card__cat">Scripting</p>
+              </article>
+              <article class="tool-card tool-card--supabase" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/4cc9a96c-d2b8-424c-9c57-666838c1acca/4napveEBZb.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback tool-card__icon--lime">SB</span>
+                </div>
+                <h4 class="tool-card__name">Supabase</h4>
+                <p class="tool-card__cat">PostgreSQL</p>
+              </article>
+              <article class="tool-card tool-card--sql" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/cc3711f9-6264-4ded-ad3b-70823e0a4f3d/JQSqHaDL50.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback tool-card__icon--lime">SQL</span>
+                </div>
+                <h4 class="tool-card__name">SQL Server</h4>
+                <p class="tool-card__cat">Database</p>
+              </article>
+              <article class="tool-card tool-card--redis" data-animate="scale-up">
+                <div class="tool-card__lottie" aria-hidden="true">
+                  <dotlottie-wc
+                    src="https://lottie.host/2920fc4c-399a-4a41-a7e3-c90101ffd2a6/LRsxV0Vinv.lottie"
+                    autoplay
+                    loop
+                  ></dotlottie-wc>
+                  <span class="tool-card__icon tool-card__icon--fallback tool-card__icon--lime">R</span>
+                </div>
+                <h4 class="tool-card__name">Redis</h4>
+                <p class="tool-card__cat">Caching</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="tools-cluster">
+            <div class="tools-cluster__head">
+              <h3 class="tools-cluster__title">Quality, ops &amp; analytics</h3>
+              <p class="tools-cluster__desc">Testing discipline, version control, and reporting.</p>
+            </div>
+            <div class="tools-cluster__grid tools-cluster__grid--compact">
+              <article class="tool-card" data-animate="scale-up">
+                <span class="tool-card__icon" aria-hidden="true">QA</span>
+                <h4 class="tool-card__name">QA &amp; Testing</h4>
+                <p class="tool-card__cat">Quality</p>
+              </article>
+              <article class="tool-card" data-animate="scale-up">
+                <span class="tool-card__icon" aria-hidden="true">GH</span>
+                <h4 class="tool-card__name">Git &amp; GitHub</h4>
+                <p class="tool-card__cat">Version Control</p>
+              </article>
+              <article class="tool-card" data-animate="scale-up">
+                <span class="tool-card__icon" aria-hidden="true">LS</span>
+                <h4 class="tool-card__name">Looker Studio</h4>
+                <p class="tool-card__cat">Analytics</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="more" class="block block--more reveal">
+        <header class="contact-header">
+          <div class="contact-header__text">
+            <p class="contact-eyebrow">Beyond the CV</p>
+            <h2 class="section-heading section-heading--inline">
+              <span class="solid">Classes &amp;</span>
+              <span class="ghost">Proof</span>
+            </h2>
+            <p class="contact-intro">Teaching content, client feedback, and a downloadable résumé — aligned with the rest of the portfolio.</p>
+          </div>
+        </header>
+        <div class="more-grid" data-stagger data-stagger-child="fade-up">
+          <a href="pages/classes.html" class="more-card" data-animate="fade-up">
+            <span class="more-card__label">Line By Line</span>
+            <span class="more-card__title">Technical classes</span>
+            <span class="more-card__desc">JavaScript, Python &amp; database lessons on Canva.</span>
+            <span class="more-card__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="pages/testimonials.html" class="more-card" data-animate="fade-up">
+            <span class="more-card__label">Social proof</span>
+            <span class="more-card__title">Testimonials</span>
+            <span class="more-card__desc">Feedback from professionals I've worked with.</span>
+            <span class="more-card__arrow" aria-hidden="true">→</span>
+          </a>
+          <a href="Assets/docs/Mlungisi_Nxumalo_CV_Software_Engineer.docx" class="more-card" download data-animate="fade-up">
+            <span class="more-card__label">Résumé</span>
+            <span class="more-card__title">Download CV</span>
+            <span class="more-card__desc">Software Engineer · Word format (.docx)</span>
+            <span class="more-card__arrow" aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="block block--contact">
+        <div class="contact-shell">
+          <header class="contact-header reveal">
+            <div class="contact-header__text">
+              <p class="contact-eyebrow">Get in touch</p>
+              <h2 class="section-heading section-heading--inline">
+                <span class="solid">Let's Work</span>
+                <span class="ghost">Together</span>
+              </h2>
+              <p class="contact-intro">Graduate programmes, full-time roles, and selective freelance work — I reply within 1–2 business days.</p>
+            </div>
+          </header>
+
+          <div class="contact-grid">
+            <aside class="contact-aside reveal">
+              <p class="contact-status" role="status">
+                <span class="contact-status__dot" aria-hidden="true"></span>
+                Open to opportunities
+              </p>
+              <p class="contact-blurb">Based in Johannesburg. Focused on business technology, software engineering, Power Platform, and quality assurance.</p>
+
+              <ul class="contact-highlights" data-stagger data-stagger-child="fade-up">
+                <li class="contact-highlight" data-animate="fade-up">
+                  <span class="contact-highlight__label">Location</span>
+                  <span class="contact-highlight__value">Johannesburg, ZA</span>
+                </li>
+                <li class="contact-highlight" data-animate="fade-up">
+                  <span class="contact-highlight__label">Response</span>
+                  <span class="contact-highlight__value">1–2 business days</span>
+                </li>
+                <li class="contact-highlight" data-animate="fade-up">
+                  <span class="contact-highlight__label">Interests</span>
+                  <span class="contact-highlight__value">Grad · Full-time · Contract</span>
+                </li>
+              </ul>
+
+              <div class="contact-channels" data-stagger data-stagger-child="fade-up">
+                <a href="mailto:xolanivictor02@gmail.com" class="contact-channel contact-channel--primary" data-animate="fade-up">
+                  <span class="contact-channel__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                  </span>
+                  <span class="contact-channel__body">
+                    <span class="contact-channel__label">Email</span>
+                    <span class="contact-channel__value">xolanivictor02@gmail.com</span>
+                  </span>
+                  <span class="contact-channel__arrow" aria-hidden="true">→</span>
                 </a>
+                <a href="tel:+27812897693" class="contact-channel" data-animate="fade-up">
+                  <span class="contact-channel__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                  </span>
+                  <span class="contact-channel__body">
+                    <span class="contact-channel__label">Phone</span>
+                    <span class="contact-channel__value">+27 81 289 7693</span>
+                  </span>
+                  <span class="contact-channel__arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="https://github.com/VictorNxumalo" class="contact-channel" target="_blank" rel="noopener noreferrer" data-animate="fade-up">
+                  <span class="contact-channel__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.395-.135-.345-.72-1.395-1.23-1.68-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  </span>
+                  <span class="contact-channel__body">
+                    <span class="contact-channel__label">GitHub</span>
+                    <span class="contact-channel__value">VictorNxumalo</span>
+                  </span>
+                  <span class="contact-channel__arrow" aria-hidden="true">↗</span>
+                </a>
+                <a href="Assets/docs/Mlungisi_Nxumalo_CV_Software_Engineer.docx" class="contact-channel" download data-animate="fade-up">
+                  <span class="contact-channel__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                  </span>
+                  <span class="contact-channel__body">
+                    <span class="contact-channel__label">CV</span>
+                    <span class="contact-channel__value">Download .docx résumé</span>
+                  </span>
+                  <span class="contact-channel__arrow" aria-hidden="true">↓</span>
+                </a>
+              </div>
 
+              <button type="button" class="contact-copy" id="copyEmailBtn" data-email="xolanivictor02@gmail.com">
+                <span class="contact-copy__label">Copy email address</span>
+                <span class="contact-copy__feedback" aria-live="polite"></span>
+              </button>
+            </aside>
 
+            <form class="contact-form reveal" id="contactForm" novalidate>
+              <p class="contact-form__eyebrow">Quick message</p>
+              <h3 class="contact-form__title">Start the conversation</h3>
+              <p class="contact-form__lede">Your details are sent via your email app — nothing is stored on this site.</p>
 
-            </div>
-            <div class=" col-md-6 text-center">
-                        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
-                            type="module"></script>
-                        <dotlottie-player data-aos="fade-in" data-aos-duration="2000" style="object-fit: cover;"
-                            src="https://lottie.host/5d9b7c5e-87b9-4cbe-bc85-87e8947bbbce/PUw14c6c78.lottie"
-                            background="transparent" speed="0.4" style=" width: 800px; height: 600px" loop
-                            autoplay></dotlottie-player>
-                        <div class="container-fluid">
-                            <a style="margin: 10px;" href="Classes.html">
-                                <img src="Assets/Line By Line GIF.gif" alt="">
-                            </a>
-                            <h1 data-aos="fade-down" data-aos-duration="2000" class="text-center mb-5"
-                                style="margin-top: 5px; font-weight: 500; font-family: Space Mono, serif; gap: 5; color: #2C3E50;">
-                                I`m also A Teacher By The Way</h1>
-
-                        </div>
-            </div>
+              <div class="form-split">
+                <div class="form-field">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+                </div>
+                <div class="form-field">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="you@email.com" autocomplete="email">
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="interest">Interest</label>
+                <select id="interest" name="interest" required>
+                  <option value="" disabled selected>Select an option…</option>
+                  <option value="Graduate Programme">Graduate Programme</option>
+                  <option value="Full-Time Role">Full-Time Role</option>
+                  <option value="Freelance / Contract">Freelance / Contract</option>
+                  <option value="Collaboration">Collaboration</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required placeholder="Tell me about the role, timeline, and what you're building…" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn-submit" data-magnetic>
+                <span class="btn-submit__label">Send via email</span>
+                <span class="btn-submit__icon" aria-hidden="true">→</span>
+              </button>
+              <p class="contact-form__note">Prefer a call? Use the phone link on the left — I'm happy to schedule.</p>
+            </form>
+          </div>
         </div>
-    </section>
-
-    <!-- Basic Information -->
-
-    <section id="Background" class="container my-5">
-        <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading">Background</h1>
-        <hr class="styled-hr">
-        <p data-aos="fade-up" data-aos-duration="2000" style="font-size: 15px;" class="background-text">
-            As a B.Com in Information Systems graduate from the University of Johannesburg, I am passionate about
-            leveraging technology to solve complex problems and drive business innovation. My academic background has
-            provided me with a strong foundation in IT systems, data analysis, project management, and business
-            processes, enabling me to bridge the gap between technical infrastructure and organizational needs.
-
-            Through hands-on experience in academic projects, I have honed my ability to work collaboratively in
-            dynamic, team-based environments. My core strengths include analytical problem-solving, adaptability, and
-            attention to detail, all of which have equipped me to effectively diagnose and resolve technical challenges.
-
-            I am particularly keen on expanding my expertise in cloud computing (specifically AWS and
-            Azure), and IT service management. I am eager to contribute to innovative IT projects that focus on system
-            reliability, network optimization, and troubleshooting, while continuing to grow professionally in emerging
-            technologies.
-
-            I am committed to learning, collaborating, and delivering meaningful results, ensuring that business
-            operations are supported by reliable and efficient IT systems. My goal is to play a key role in
-            organizations that prioritize both technological excellence and business success.
-        </p>
-    </section>
-    <hr class="styled-hr">
-    <!-- Key Strengths Table -->
-    <div id="KeyStrengths" class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <table style="text-align: center;" id="Keystrenghts" data-aos="fade-up" data-aos-duration="2000"
-                    class="table table-striped table-bordered key-strengths-table">
-                    <thead>
-                        <tr>
-                            <th>
-                                <h1 style="text-align: center;" data-aos="zoom-in" data-aos-duration="2000"> Soft Skills
-                                </h1>
-
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-users"></i>
-                                <ul>
-                                    <li>Creativity</li>
-                                    <li>Excellent Communication</li>
-                                    <li>Time Management</li>
-                                    <li>Adaptability</li>
-                                    <li>Analytical problem-solving</li>
-                                    <li>Attention To Detail</li>
-                                    <li>Critical Thinking</li>
-                                    <li>Collaboration</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+      </section>
     </div>
+  </div>
 
+  <div class="float-cta">
+    <a href="#contact" class="cta-orange" data-magnetic>Let's Talk</a>
+    <a href="https://github.com/VictorNxumalo" target="_blank" rel="noopener noreferrer" class="cta-lime">View GitHub</a>
+  </div>
 
-    <!-- Technical Skills -->
-    <div class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-
-
-                <table style="text-align: center;" id="KeyStrenghts" data-aos="fade-up" data-aos-duration="2000"
-                    class="table table-striped table-bordered key-strengths-table">
-                    <thead>
-                        <tr>
-                            <th>
-                                <h1 style="text-align: center;" data-aos="zoom-in" data-aos-duration="2000">TECHNICAL
-                                    SKILLS
-                                </h1>
-
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-code"></i>
-                                <ul>
-                                    This section highlights my versatile skill set and expertise across key areas vital
-                                    for software development.
-                                </ul>
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__brand">© <span id="currentYear"></span> <strong>Mlungisi Nxumalo</strong> · Software Engineer · Johannesburg</p>
+      <ul class="site-footer__nav">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="pages/classes.html">Classes</a></li>
+        <li><a href="pages/testimonials.html">Testimonials</a></li>
+        <li><a href="Assets/docs/Mlungisi_Nxumalo_CV_Software_Engineer.docx" download>CV</a></li>
+        <li><a href="mailto:xolanivictor02@gmail.com">Email</a></li>
+      </ul>
     </div>
-    <!-- Technical Skills -->
-
-    <section id="TechnicalSkills" class="container my-5">
-        <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading" style="text-align: center;"
-            class="section-heading"></h1>
-
-
-        <div class="row">
-            <div class="col-md-6">
-                <h4>
-                    <i class="fas fa-laptop-code"></i> Web Development
-                    <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#webDevelopmentContent" aria-expanded="false"
-                        aria-controls="webDevelopmentContent">
-                        <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-                        <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                            background="##FFFFFF" speed="0.20" style="width: 30px; height: 30px" autoplay direction="-1"
-                            mode="normal"></lottie-player>
-                    </button>
-                </h4>
-                <div id="webDevelopmentContent" class="collapse" data-bs-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            I have a strong foundation in web development, encompassing both front-end and back-end
-                            technologies. On the front-end, I am proficient in creating responsive and user-friendly
-                            interfaces
-                            using HTML, CSS, and JavaScript. My expertise extends to back-end development, where I build
-                            robust
-                            server-side applications with Node.js, and manage databases using MySQL and MySQL Workbench.
-
-                            I am experienced in version control with Git and GitHub, ensuring smooth collaboration and
-                            efficient
-                            code management. Additionally, I leverage tools like npm, and RESTful API integration to
-                            deliver
-                            scalable and high-performance web applications.
-
-                            My focus is always on optimizing functionality, accessibility, and user experience while
-                            adhering to
-                            best practices in coding standards and security protocols. Whether building from scratch or
-                            contributing to existing projects, I bring a detail-oriented and results-driven approach to
-                            web
-                            development.
-                        </li>
-                        <hr class="styled-hr">
-                        <div data-aos="fade-left" data-aos-duration="2000" class="col-md-6">
-                            <h4><i class="fas fa-code"></i>TOOLS</h4>
-                            <ul class="list-group">
-                                <li class="list-group-item">HTML 5</li>
-                                <li class="list-group-item">CSS</li>
-                                <li class="list-group-item">JavaScript</li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-md-6">
-                <h4>
-                    <i class="fas fa-laptop-code"></i> Object-Oriented Programming
-                    <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#OOPContent" aria-expanded="false" aria-controls="OOPContent">
-                        <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-                        <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                            background="##FFFFFF" speed="0.20" style="width: 30px; height: 30px" autoplay direction="-1"
-                            mode="normal"></lottie-player>
-                    </button>
-                </h4>
-                <div id="OOPContent" class="collapse" data-bs-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            I have a solid understanding and practical experience in Object-Oriented Programming (OOP),
-                            utilizing its principles to design and develop efficient, reusable, and maintainable
-                            software. I am well-versed in key OOP concepts, such as classes, objects, inheritance,
-                            polymorphism, abstraction, and encapsulation, which allow me to break down complex problems
-                            into modular components.
-
-                            By applying these principles, I create scalable and flexible code that is easier to maintain
-                            and extend over time. I have experience using OOP in various programming languages such as
-                            C#, Python, and JavaScript, ensuring that I can adapt to different environments and
-                            project requirements. Additionally, I emphasize clean and organized code, adhering to best
-                            practices in object-oriented design patterns, and using tools like UML for visualizing
-                            software architecture.
-                        </li>
-                        <hr class="styled-hr">
-                        <div data-aos="fade-left" data-aos-duration="2000" class="col-md-6">
-                            <h4><i class="fas fa-code"></i>Programming languages</h4>
-                            <ul class="list-group">
-                                <li class="list-group-item">C# (Sharp)</li>
-                                <li class="list-group-item">Python</li>
-                                <li class="list-group-item">JavaScript</li>
-                            </ul>
-                        </div>
-
-                    </ul>
-                </div>
-            </div>
-
-
-            <div class="col-md-6">
-                <h4>
-                    <i class="fas fa-laptop-code"></i> Database Design, Development & Management
-                    <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#DBcontent" aria-expanded="false" aria-controls="DBcontent">
-                        <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-                        <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                            background="##FFFFFF" speed="0.20" style="width: 30px; height: 30px" autoplay direction="-1"
-                            mode="normal"></lottie-player>
-                    </button>
-                </h4>
-                <div id="DBcontent" class="collapse" data-bs-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            I have hands-on experience in database design, development, and management, with a focus on
-                            MySQL and Microsoft SQL Server. I am proficient in writing and optimizing complex SQL
-                            queries, designing relational databases, and implementing data models that support business
-                            logic and improve data retrieval performance.
-
-                            With MySQL, I’ve worked on creating and managing databases, designing efficient schemas, and
-                            optimizing queries for faster performance. I frequently use MySQL Workbench for visual
-                            database design, managing database connections, and performing tasks like running queries,
-                            visualizing schema structures, and maintaining server health.
-
-                            In addition, I have experience using SQL Server Management Studio (SSMS), a tool for
-                            managing Microsoft SQL Server instances, where I’ve developed stored procedures, functions,
-                            and triggers, as well as performed database backups, restores, and troubleshooting. I
-                            understand the importance of ensuring data integrity, security, and scalability, and have
-                            worked with techniques such as indexing and normalization to optimize performance in both
-                            MySQL and Microsoft SQL environments.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <h4>
-                    <i class="fas fa-laptop-code"></i>Frameworks
-                    <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#FrameworkContent" aria-expanded="false" aria-controls="FrameworkContent">
-                        <!-- Load script only once at document level -->
-                        <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                            background="transparent" speed="0.20" style="width: 30px; height: 30px" autoplay
-                            direction="-1" mode="normal">
-                        </lottie-player>
-                    </button>
-                </h4>
-                <div id="FrameworkContent" class="collapse" data-bs-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            I have hands-on experience working with several modern web development frameworks, including
-                            Node.js, Django, Bootstrap, and Socket.io.
-
-                            <p>With Node.js, I've developed server-side applications that are scalable and efficient,
-                                utilizing the asynchronous, event-driven nature of Node.js to build fast and responsive
-                                back-end services. I've integrated APIs, handled real-time data, and worked with
-                                Express.js
-                                to manage routing and middleware effectively.</p>
-
-                            <p>In Django, I have developed robust web applications with a focus on security and rapid
-                                development. I am familiar with Django's MVC architecture, form handling, database
-                                models,
-                                and integrating third-party packages to add functionality to applications.</p>
-
-                            <p>I also have experience using Bootstrap to create responsive, mobile-first front-end
-                                designs.
-                                Bootstrap's grid system and pre-built components helped me build user-friendly and
-                                visually
-                                appealing interfaces, ensuring compatibility across various devices and screen sizes.
-                            </p>
-
-                            <p>For my final year project in 2024, I worked with Socket.io to implement real-time
-                                communication features, enabling live interactions between users in a web application.
-                                Although my use of Socket.io was limited to specific functionalities, it was integral in
-                                enhancing the user experience through real-time updates and notifications.</p>
-                        </li>
-                    </ul>
-                    <hr class="styled-hr">
-                    <div class="col-md-6">
-                        <h4><i class="fas fa-code"></i> Frameworks Used</h4>
-                        <ul class="list-group">
-                            <li class="list-group-item">Node.js <span>(Runtime environment)</span></li>
-                            <li class="list-group-item">Django</li>
-                            <li class="list-group-item">Bootstrap</li>
-                            <li class="list-group-item">Socket.io</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <h4>
-                    <i class="fas fa-laptop-code"></i>Version Control
-                    <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#VersionControlContent" aria-expanded="false"
-                        aria-controls="VersionControlContent">
-                        <script src="https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js"></script>
-                        <lottie-player src="https://lottie.host/2f55df05-d2a3-4db2-ab58-749b6555cae7/Q313ZCM9HA.json"
-                            background="##FFFFFF" speed="0.20" style="width: 30px; height: 30px" autoplay direction="-1"
-                            mode="normal"></lottie-player>
-                    </button>
-                </h4>
-                <div id="VersionControlContent" class="collapse" data-bs-parent="#accordionExample">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            I have solid experience with Git and GitHub for version control, which allows me to
-                            effectively manage code changes, collaborate with team members, and maintain the integrity
-                            of software projects.
-
-                            With Git, I am comfortable using commands for branching, merging, and resolving conflicts,
-                            ensuring that multiple developers can work on the same codebase without issues. I use Git
-                            for tracking code changes, committing work, and rolling back to previous versions when
-                            necessary.
-
-                            On GitHub, I have actively participated in collaborative development, managing repositories,
-                            creating pull requests, and performing code reviews to maintain high code quality. I am
-                            proficient in using GitHub’s features like Issues, Projects, and Actions to automate
-                            workflows, track bugs, and facilitate continuous integration and deployment (CI/CD).
-                            GitHub’s interface and integration with development tools have greatly enhanced my ability
-                            to contribute to both personal and team projects.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Education -->
-    <!-- Education Section -->
-    <section id="Education" class="container my-5">
-        <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading">Education</h1>
-        <hr class="styled-hr">
-
-        <!-- B.Com Information Systems -->
-        <div data-aos="fade-down" data-aos-duration="2000" class="card shadow-lg mb-4">
-            <div class="card-body">
-                <img style="margin-bottom: 30px; object-fit: cover;" src="Assets/image.png" alt="" height="200px">
-                <h5 class="card-title">B.Com Information Systems: Management Information Systems</h5>
-                <p><strong>University of Johannesburg</strong> | NQF Level 7 | Gauteng, Johannesburg, South Africa
-                    (2022- 2024)</p>
-
-                <p class="card-text">
-                    Completed a Bachelor's degree in B.com Information Systems.
-                </p>
-            </div>
-            <div class="mt-4" style="padding: 5px;">
-                <h2 class="section-heading">Modules Studied</h2>
-                <hr class="styled-hr">
-                <ul class="education-list">
-                    <li>Information Systems (<span style="color: green;" class="highlight"><strong><em>PASS WITH
-                                    DISTINCTION</em></strong></span>)</li>
-                    <li>Information Systems Year Project</li>
-                    <li>Software Development</li>
-                    <li>Entrepreneurship (<span style="color: green;" class="highlight"><strong><em>PASS WITH
-                                    DISTINCTION</em></strong></span>)</li>
-                    <li>Business Management</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- High School -->
-        <div data-aos="fade-down" data-aos-duration="2000" class="card shadow-lg mb-4">
-            <div class="card-body">
-                <img style="margin-bottom: 30px; object-fit: cover; width: 100%; height: auto;"
-                    src="Assets/tsakaneext8/image.png" alt="">
-                <h5 class="card-title">High School: Science Education</h5>
-                <p>|National Senior Certificate| NQF Level 4| Gauteng, Ekhurhuleni. South Africa (2018 - 2021) </p>
-                <p class="card-text">Focused on science subjects, including Mathematics, Physical Sciences, and Life
-                    Sciences, while achieving strong academic results.</p>
-            </div>
-            <div class="mt-4" style="padding: 5px;">
-                <h2 class="section-heading">Subjects Studied</h2>
-                <hr class="styled-hr">
-                <ul class="education-list">
-                    <li>Mathematics</li>
-                    <li>Physical Sciences</li>
-                    <li>Life Sciences</li>
-                    <li>Geography</li>
-                    <li>English</li>
-                    <li>IsiZulu</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Subjects Studied -->
-
-    </section>
-
-    <!-- Projects Section -->
-    <section id="Projects" class="container my-5">
-        <h1 class="section-heading text-center mb-5">PROJECTS</h1>
-    <div class="row">
-        <!-- Project Cards Container -->
-        <div class="col-md-4 mb-4">
-            <!-- Project 1: StudentInsider -->
-            <div class="project-card card h-100 shadow-lg" data-aos="fade-up" data-aos-duration="1000">
-                <div class="card-body d-flex flex-column">
-                    <div class="project-header mb-3">
-                        <span class="project-year">2024</span>
-                        <h3 class="card-title">StudentInsider</h3>
-                    </div>
-                    <img src="Assets/insider.png" alt="StudentInsider" class="project-image mb-3">
-                    <p class="card-text flex-grow-1">Student information system helping university students navigate campus life effectively.</p>
-                    <a href="https://victornxumalo.github.io/finalYearProject-StudentInsider-/">View live Demo</a>
-                  
-                    <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#projectModal1">
-                        View Project <i class="fas fa-arrow-right ms-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <!-- Project 2: SITE Holdings -->
-            <div class="project-card card h-100 shadow-lg" data-aos="fade-up" data-aos-duration="1200">
-                <div class="card-body d-flex flex-column">
-                    <div class="project-header mb-3">
-                        <span class="project-year">2025</span>
-                        <h3 class="card-title">SITE Holdings</h3>
-                    </div>
-                    <img src="Assets/SiTE_Holdings_Logo-removebg-preview.png" alt="SITE Holdings" class="project-image mb-3">
-                    <p class="card-text flex-grow-1">Corporate landing page focused on user engagement and conversion optimization.</p>
-                    <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#projectModal2">
-                        View Project <i class="fas fa-arrow-right ms-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4 mb-4">
-            <!-- Project 3: The Telegram -->
-            <div class="project-card card h-100 shadow-lg" data-aos="fade-up" data-aos-duration="1400">
-                <div class="card-body d-flex flex-column">
-                    <div class="project-header mb-3">
-                        <span class="project-year">2025</span>
-                        <h3 class="card-title">The Telegram</h3>      
-                    </div>
-                    <img src="Assets/The telegram/Screenshot 2025-03-14 091831.png" alt="The Telegram" class="project-image mb-3">
-                    <p class="card-text flex-grow-1">Modern news platform combining professional journalism with interactive features.</p>
-                    <a href="https://victornxumalo.github.io/The-Telegram/">View live Demo</a>
-                    <button class="btn btn-project" data-bs-toggle="modal" data-bs-target="#telegramModal">
-                        View Project <i class="fas fa-arrow-right ms-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-        <!-- Modal for The Telegram -->
-        <div class="modal fade" id="telegramModal" tabindex="-1" aria-labelledby="telegramModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="telegramModalLabel">The Telegram News Magazine</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Project Overview -->
-                        <h5>Project Overview</h5>
-                        <p>The Telegram is a modern, dynamic news website that combines professional journalism with
-                            user engagement. Built with responsive design principles and featuring a sophisticated red
-                            and white color scheme.</p>
-
-                        <!-- Key Features Section -->
-                        <h5 class="mt-4">Key Features</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Navigation & Structure</h6>
-                                <ul>
-                                    <li>Dual-Navigation System</li>
-                                    <li>Mobile-Responsive Menu</li>
-                                    <li>Sticky Header</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Content Presentation</h6>
-                                <ul>
-                                    <li>Featured Stories Showcase</li>
-                                    <li>Dynamic Grid Layout</li>
-                                    <li>Category-based Browsing</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- User Engagement Features -->
-                        <h5 class="mt-4">User Engagement</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Interactive Elements</h6>
-                                <ul>
-                                    <li>Share Story Functionality</li>
-                                    <li>Newsletter Signup</li>
-                                    <li>Story Submission Form</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Subscription System</h6>
-                                <ul>
-                                    <li>Multi-step Subscription Process</li>
-                                    <li>Various Subscription Plans</li>
-                                    <li>Secure Payment Integration</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Technical Stack -->
-                        <h5 class="mt-4">Technical Implementation</h5>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h6>Frontend Technologies</h6>
-                                <ul>
-                                    <li>HTML5</li>
-                                    <li>CSS3 (Tailwind CSS)</li>
-                                    <li>JavaScript</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <h6>Additional Tools</h6>
-                                <ul>
-                                    <li>AOS Animations</li>
-                                    <li>Font Awesome Icons</li>
-                                    <li>Custom Fonts (Playfair Display, Montserrat)</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- Progress Bar -->
-                        <div class="mt-4">
-                            <p class="text-center">PROJECT PROGRESS</p>
-                            <h1 class="text-center" style="font-size: x-large;">75% Complete</h1>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75"
-                                    aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-
-                        <!-- Project Screenshots -->
-                        <h5 class="mt-4">Project Showcase</h5>
-                        <div class="row mt-3">
-                            <!-- Add your project screenshots here -->
-                            <div class="col-md-4 mb-3">
-                                <img src="Assets/The telegram/Screenshot 2025-03-14 091831.png"
-                                    class="img-fluid rounded" alt="Telegram Screenshot 1">
-                            </div>
-                            <!-- Add more screenshots as needed -->
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Modal for StudentInsider -->
-        <div style="font-family: Space Mono, serif; width: 100%;" class="modal fade" id="projectModal1" tabindex="-1"
-            aria-labelledby="projectModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-                            <iframe loading="lazy"
-                                style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                                src="https://www.canva.com/design/DAGe4xmGLdE/9xz3DNkhgO2oBBeYrx0YsQ/watch?embed"
-                                allowfullscreen="allowfullscreen" allow="fullscreen">
-                            </iframe>
-                        </div>
-                        <a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGe4xmGLdE&#x2F;9xz3DNkhgO2oBBeYrx0YsQ&#x2F;watch?utm_content=DAGe4xmGLdE&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-                            target="_blank" rel="noopener"></a>
-                        <h5>Project Overview</h5>
-                        <p><strong>Description:</strong> Designed and developed a dynamic web application, Student
-                            Insider, aimed at streamlining university resources for students by centralizing
-                            entertainment, collaboration, and information. The application was built to address
-                            challenges faced by students transitioning into university life.</p>
-
-                        <p><strong>Objective:</strong> Create a user-friendly Student Information System (SIS) tailored
-                            to empower students academically, socially, and personally. The platform integrates
-                            functionalities such as academic support, social networking tools, lifestyle guidance, and
-                            entertainment features.</p>
-
-                        <p><strong>Technologies Used 2024:</strong> JavaScript, Socket.io, Node.js, MySQL & MySQL
-                            Workbench, CSS, HTML, Bootstrap</p>
-                        <p><strong>Technologies Used 2025:</strong> JavaScript, Socket.io, Node.js, MySQL & MySQL
-                            Workbench, CSS, HTML, Tailwind CSS</p>
-
-                        <h5>Responsibilities</h5>
-                        <ul>
-                            <li>Designed and implemented core features like tutoring services and personalized
-                                educational resources according to faculties.</li>
-                            <li>Built an intuitive front-end user interface with responsive design principles for
-                                seamless interaction across devices. <strong>Changes implemented: Moved from Bootstrap
-                                    To Tailwind CSS.</strong></li>
-                            <li>Developed robust back-end functionality to manage data securely and ensure real-time
-                                updates.</li>
-                            <li>Ensured database management for student profiles and platform activities.</li>
-                        </ul>
-
-                        <h5>Outcome</h5>
-                        <p>Successfully delivered a versatile and scalable platform that fosters inclusivity,
-                            collaboration, and empowerment among university students.</p>
-
-                        <h5>Features</h5>
-                        <ul>
-                            <li><strong>Entertainment Features:</strong> Vlogs, blogs.</li>
-                            <li><strong>Collaboration Tools:</strong> Networking modules and discussion platforms to
-                                help students connect with peers.</li>
-                            <li><strong>Information Access:</strong> Centralized resources for faculty updates,
-                                scholarships, mental health guides, financial advice, etc.</li>
-                        </ul>
-
-                        <p style="font-family: Space Mono, serif; text-align: center;">PROJECT PROGRESS</p>
-                        <h1
-                            style="color: green; font-family: Space Mono, serif; text-align: center; font-size: x-large;">
-                            100% (Percent)</h1>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-
-                        <p style="font-family: Space Mono, serif;">Successfully delivered a highly versatile and
-                            scalable web application designed to foster inclusivity, collaboration, and empowerment
-                            among university students. This innovative platform provides students with the tools and
-                            features they need to connect, share ideas, and collaborate on projects seamlessly.</p>
-
-                        <!-- Grid Section with 6 Interactive Cards -->
-                        <h5 class="mt-4">Project Showcase</h5>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/1. Login Screen.png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/1. Login Screen.png" card-img-top"
-                                        alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Login</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/2. Register Screen.png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/2. Register Screen.png"
-                                        class="card-img-top" alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Register</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/3. Home Screen.png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/3. Home Screen.png"
-                                        class="card-img-top" alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Home Page</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/5. CareerGuidance(InAspire).png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/5. CareerGuidance(InAspire).png"
-                                        class="card-img-top" alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Career Guidance (InAspire)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/6. Blogs (InScribe) (1).png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/6. Blogs (InScribe) (1).png"
-                                        class="card-img-top" alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Blogs (InScribe) part 1</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/7. Blogs (InScribe) (2).png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/7. Blogs (InScribe) (2).png"
-                                        class="card-img-top" alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Blogs (InScribe) part 2</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="card"
-                                    onclick="showImage('Assets/StudentInsiderShowCaseImages/8. Blogs (Inscribe) (3).png')">
-                                    <img src="Assets/StudentInsiderShowCaseImages/8. Blogs (Inscribe) (3).png"
-                                        class="card-img-top" alt="Project Screenshot 1">
-                                    <div class="card-body">
-                                        <p class="card-text">Blogs (InScribe) part 3</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Image Modal -->
-                        <div id="imageModal" class="modal" onclick="closeImageModal()">
-                            <span class="close">&times;</span>
-                            <img class="modal-content" id="modalImage">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <style>
-            #imageModal {
-                object-fit: cover;
-                display: none;
-                position: fixed;
-                z-index: 1000;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            .modal-content {
-                margin: auto;
-                display: block;
-                max-height: 80%;
-            }
-
-            .close {
-                position: absolute;
-                top: 10px;
-                right: 25px;
-                color: white;
-                font-size: 35px;
-                cursor: pointer;
-            }
-        </style>
-
-        <script>
-            function showImage(src) {
-                document.getElementById("modalImage").src = src;
-                document.getElementById("imageModal").style.display = "block";
-            }
-
-            function closeImageModal() {
-                document.getElementById("imageModal").style.display = "none";
-            }
-        </script>
-
-        </div>
-        <!-- Modal for SITE HOLDINGS -->
-        <!-- Modal for SITE HOLDINGS -->
-        <div class="modal fade" id="projectModal2" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div style="" class="modal-body">
-                        <h5>Project Overview</h5>
-                        <p><strong>Description:</strong> The project involved designing and developing a responsive and
-                            visually appealing landing page for <strong>Speak It To Existence (SITE) Holdings.</strong>
-                            The landing
-                            page was aimed at engaging students at the University of Johannesburg, showcasing the
-                            platform’s core features, and driving user sign-ups.</p>
-
-                        <p><strong>Objective:</strong> Optimize the page for user engagement and conversion through
-                            compelling visuals and clear CTAs. Highlight the Organization`s key services, such as
-                            billboard advertising, car wrap advertising bridge advertising.
-
-                        <p><strong>Technologies Used:</strong> Frontend: HTML, CSS, JavaScript, Tailwind
-                            Animations: CSS Keyframes, JavaScript libraries (e.g., GSAP for smooth transitions)
-                            Version Control: Git and GitHub
-                            .</p>
-
-                        <h5> Current Responsibilities</h5>
-                        <ul>
-                            Design Implementation:
-
-                            Translated Figma wireframes into a fully functional and responsive landing page.
-                            Ensured compatibility across various devices and browsers.
-                            User Experience (UX) Optimization:
-
-                            Created an intuitive layout to guide users toward key CTAs like Sign Up, Explore, and Learn
-                            More.
-                            Added animations to improve engagement without overwhelming the design.
-                            Core Feature Integration:
-
-                            Integrated navigation links for sections like Blogs, Tutoring, and Careers.
-                            Highlighted unique features such as gamification and vlog creation.
-                            Performance and SEO:
-
-                            Optimized images, scripts, and stylesheets to reduce load times.
-                            Implemented meta tags and semantic HTML for better search engine visibility.
-                            Testing and Debugging:
-
-                            Ensured responsiveness using Chrome DevTools and browser testing.
-                            Fixed bugs and polished user interactions based on feedback.
-                        </ul>
-
-                        <h5> Expected Outcome</h5>
-                        <p>Successfully delivered a versatile and scalable platform that fosters inclusivity,
-                            collaboration, and empowerment among university students.</p>
-
-                        <h5> Desired Features</h5>
-                        <ul>
-                            Responsive Design: Adapts seamlessly to desktop, tablet, and mobile devices.
-                            Interactive Elements:
-                            Animated buttons and hover effects for user engagement.
-                            Dynamic content sections for blogs and vlogs.
-                            Clear Call-to-Actions (CTAs): Buttons and links strategically placed to encourage
-                            conversions.
-
-                            Themed Design: Maintained the brand’s colors, fonts, and visuals for consistency.
-                        </ul>
-                    </div>
-                    <div style="position: relative; font-family: Space Mono, serif; width: 100%; height: 0; padding-top: 56.2500%;
-                        padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-                        border-radius: 8px; will-change: transform;">
-                        <iframe loading="lazy"
-                            style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-                            src="https://www.canva.com/design/DAGdbJMGvRo/_V6_Crg7wcIwRZe349j16A/watch?embed"
-                            allowfullscreen="allowfullscreen" allow="fullscreen">
-                        </iframe>
-                    </div>
-                    <a style="font-family: Space Mono, serif;"
-                        href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGdbJMGvRo&#x2F;_V6_Crg7wcIwRZe349j16A&#x2F;watch?utm_content=DAGdbJMGvRo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link"
-                        target="_blank" rel="noopener"></a>
-                    <p style=" font-family: Space Mono, serif;text-align: center;">PROJECT PROGRESS</p>
-                    <h1 style=" font-family: Space Mono, serif; text-align: center; font-size: x-large;">55 % (Percent)
-                    </h1>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p style="font-family:Space Mono, serif ;">The project is currently in progress. The UX design and
-                        website structure have been fully
-                        developed, ensuring a seamless and intuitive user experience. At this stage, we are awaiting the
-                        client's content—images, videos, and text—to complete the content integration and bring the site
-                        to its final form.</p>
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <!-- Testimonials Section -->
-
-    <!-- Certification Cards -->
-    <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading" style="  font-size: 2rem;
-    font-weight: 700;
-    color: #2C3E50;
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;">Certifications</h1>
-    <hr class="styled-hr">
-    <div class="row" id="Certifications">
-        <!-- Certification 1 -->
-        <div data-aos="zoom-in" data-aos-duration="1400" class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <div class="card-body d-flex align-items-center">
-                    <!-- Icon -->
-                    <img src="Assets/download-removebg-preview.png" alt="" class="certification-img">
-                    <!-- Card Content -->
-                    <div>
-                        <h5 class="card-title">Starting Python Programming</h5>
-                        <p class="card-text">Issued by Alison - 16 January 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Certification 2 -->
-        <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <div class="card-body d-flex align-items-center">
-                    <!-- Icon -->
-                    <img src="Assets/download-removebg-preview.png" alt="" class="certification-img">
-                    <!-- Card Content -->
-                    <div>
-                        <h5 class="card-title">Information Systems & Business Processes</h5>
-                        <p class="card-text">Issued by Alison - 11 January 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <div class="card-body d-flex align-items-center">
-                    <!-- Icon -->
-                    <img style="margin-bottom: 5px;" src="Assets/image.png"" class=" certification-img">
-                    <!-- Card Content -->
-                    <div>
-                        <h5 class="card-title">Personal Development Programme</h5>
-                        <p class="card-text">Issued By The University Of Johannesburg - 2023</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Certification 3 -->
-        <div data-aos="zoom-in" data-aos-duration="1800" class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <div class="card-body d-flex align-items-center">
-                    <!-- Icon -->
-                    <img src="Assets/udemy-removebg-preview.png" alt="" class="certification-img">
-                    <!-- Card Content -->
-                    <div>
-                        <h5 class="card-title">Python Mastery Course: From Beginner to Advanced</h5>
-                        <p class="card-text">Issued by EDUCBA Bridging the Gap by Udemy - 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Certification 4 -->
-        <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <div class="card-body d-flex align-items-center">
-                    <!-- Icon -->
-                    <img style="margin-bottom: 5px;" src="Assets/image.png"" class=" certification-img">
-                    <!-- Card Content -->
-                    <div>
-                        <h5 class="card-title">Artificial Intelligence In The 4th Industrial Revolution</h5>
-                        <p class="card-text">Issued by TThe University Of Johannesburg - 25 november 2024</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Certification 5 -->
-        <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-            <div class="card shadow-lg">
-                <div class="card-body d-flex align-items-center">
-                    <!-- Icon -->
-                    <img style="margin-bottom: 5px;" src="Assets/freecodecamp.png" class=" certification-img">
-                    <!-- Card Content -->
-                    <div>
-                        <h5 class="card-title">freecodecamp: Responsive Web Design </h5>
-                        <p class="card-text">Issued by FreeCodeCamo - 4 February 2025</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Services Section -->
-    <section id="services">
-        <h1 data-aos="zoom-in" data-aos-duration="2000" class="section-heading text-center">Services I Offer</h1>
-        <hr class="styled-hr">
-        <div class="row">
-
-            <!-- Service 2: Web Development -->
-            <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-                <div class="card service-card shadow-lg" data-bs-toggle="modal" data-bs-target="#webDevelopmentModal"
-                    style="cursor: pointer;">
-                    <div class="card-body text-center">
-                        <img src="Assets/servicesIcons/coding (1).png" alt="Web Development" class="service-icon">
-                        <h5 class="card-title">Web Development</h5>
-                        <p class="card-text">I build fully responsive websites using the latest technologies to ensure
-                            your site looks great on any device.</p>
-                        <p style="text-align: center; color: blue;">Click to view more details.</p>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modal -->
-            <div style="background-color: transparent;" class="modal fade" id="webDevelopmentModal" tabindex="-1"
-                aria-labelledby="webDevelopmentModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="webDevelopmentModalLabel">VertexSolutions
-                            </h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-
-                        <div class="modal-body">
-                            <div
-                                style="position: relative; width: 100%; height: 100%; padding-top: 56.2500%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
-                                <iframe loading="lazy"
-                                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0; margin: 0;"
-                                    src="https://www.canva.com/design/DAGc8zQ2UlQ/aqiZpu8B5X_Kkl_fP__K3w/view?embed"
-                                    allowfullscreen="allowfullscreen" allow="fullscreen">
-                                </iframe>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Service 3: Landing Page Design -->
-            <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-                <div class="card service-card shadow-lg">
-                    <div class="card-body text-center">
-                        <img src="Assets/servicesIcons/website.png" alt="Landing Page Design" class="service-icon">
-                        <h5 class="card-title">Landing Page Designer</h5>
-                        <p class="card-text">I create high-converting landing pages that capture attention and drive
-                            action, tailored to your target audience.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 4: UX/UI Design -->
-            <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-                <div class="card service-card shadow-lg">
-                    <div class="card-body text-center">
-                        <img src="Assets/servicesIcons/ux-design.png" alt="UX/UI Design" class="service-icon">
-                        <h5 class="card-title">UX/UI Designer</h5>
-                        <p class="card-text">I design intuitive, user-friendly interfaces that enhance the user
-                            experience, keeping the design both functional and aesthetically pleasing.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 5: Software Development -->
-            <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-                <div class="card service-card shadow-lg">
-                    <div class="card-body text-center">
-                        <img src="Assets/servicesIcons/female-developer.png" alt="Software Developer"
-                            class="service-icon">
-                        <h5 class="card-title">Software Developer</h5>
-                        <p class="card-text">I develop custom software solutions tailored to your business needs,
-                            optimizing operations and driving growth.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 6: Database Designing and management-->
-            <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-                <div class="card service-card shadow-lg">
-                    <div class="card-body text-center">
-                        <img src="Assets/servicesIcons/database (1).png" alt="Database Designing and management"
-                            class="service-icon">
-                        <h5 class="card-title">Database Designing & Management</h5>
-                        <p class="card-text">I help you design, create, and manage databases effectively, ensuring
-                            data security and integrity.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Service 7: Graphic designing-->
-            <div data-aos="zoom-in" data-aos-duration="1600" class="col-md-4 mb-4">
-                <div class="card service-card shadow-lg">
-                    <div class="card-body text-center">
-                        <img src="Assets/servicesIcons/layers.png" alt="Graphic designing" class="service-icon">
-                        <h5 class="card-title">Graphic Designer</h5>
-                        <p class="card-text">I help you create visually appealing and engaging designs,
-                            making your brand stand out and catching the attention of potential customers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer id="footer" class="bg-white text-white py-5">
-        <div class="container">
-            <h1 class="section-heading text-center">Contact Information</h1>
-            <ul style="color: #2C3E50; text-align: center; font-size: 15px;">
-                <p><strong>Email:</strong> xolanivictor02@gmail.com</p>
-                <p><strong>Address:</strong>Ekhurhuleni 1550</p>
-                <p><strong>Phone:</strong> 0812897693</p>
-            </ul>
-            <div class="row">
-
-                <!-- Google Map -->
-                <div style="text-align: center;" class="col-md-12 mb-4">
-                    <hr class="styled-hr">
-                    <h4>My Location</h4>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.18928538022!2d28.370071276184373!3d-26.352739076985255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9520c2ad61be2b%3A0xc0b0c6e505d2cf87!2sTsakane%20Mall!5e0!3m2!1sen!2sza!4v1736582964907!5m2!1sen!2sza"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-
-            <!-- Contact Me Button -->
-            <div class="text-center mb-4">
-                <button style="font-size: 15px;" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    data-bs-target="#contactModal">
-                    Send Me An Email
-                </button>
-            </div>
-
-        </div>
-
-        <!-- <div style="text-align: center; align-items: center; display: block; gap: 20px;" class="social-icons-container">
-
-            <a href="https://www.facebook.com/profile.php?id=100079323153502&mibextid=ZbWKwL" target="_blank">
-                FACEBOOK_
-            </a>
-            <a href="https://www.linkedin.com/jobs/view/4104361307">
-                LINKEDIN_
-            </a>
-            <a href="https://www.instagram.com/_victormkhwanazi?igsh=d2o3cTBkZ3V2ZnRm">
-                INSTAGRAM_
-            </a>
-        </div> -->
-    </footer>
-
-    <!-- Modal for Contact Form -->
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="contactModalLabel">Send Me an Email</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="mailto:xolanivictor02@Gmail.com" method="POST" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Email</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--Functionality of the Scroll to top button -->
-    <script>
-        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-        window.onscroll = () => {
-            if (window.scrollY > 300) {
-                scrollToTopBtn.classList.add('show');
-            } else {
-                scrollToTopBtn.classList.remove('show');
-            }
-        };
-    </script>
-
-    <!-- bootstrap Js -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- Aos animation JavaScript-->
-    <script>
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loading-screen');
-            const content = document.getElementById('content');
-
-            setTimeout(() => {
-                loader.classList.add('fade-out');
-                setTimeout(() => {
-                    loader.classList.add('hidden');
-                    content.classList.remove('hidden');
-                }, 500); // Wait for fade-out to complete
-            }, 3000); // Show loader for 4 seconds
-        });
-    </script>
-
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+  </footer>
+
+  <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js" type="module"></script>
+  <script src="scripts/motion.js"></script>
+  <script src="scripts/site.js"></script>
 </body>
-
 </html>
