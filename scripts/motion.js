@@ -45,6 +45,10 @@
       ".reveal, .motion-item, [data-animate], [data-count], .section-heading"
     );
 
+    document.querySelectorAll(".profile-sticky--visible").forEach((el) => {
+      el.classList.add("is-visible");
+    });
+
     if (prefersReduced) {
       targets.forEach((el) => el.classList.add("is-visible"));
       return;
@@ -367,7 +371,24 @@
     };
   }
 
+  function ensureProfileVisible() {
+    document
+      .querySelectorAll(".profile-sticky--visible, .profile-sticky, .detail-sidebar")
+      .forEach((el) => {
+        el.classList.add("is-visible");
+        el.style.opacity = "1";
+        el.style.transform = "none";
+        el.style.visibility = "visible";
+      });
+
+    document.querySelectorAll(".profile-card").forEach((card) => {
+      card.style.opacity = "1";
+      card.style.transform = "none";
+    });
+  }
+
   function init() {
+    ensureProfileVisible();
     initScrollProgress();
     initHeroEntrance();
     initReveals();

@@ -35,15 +35,22 @@
         </div>
         <div class="profile-card__photo-wrap">
           <span class="profile-card__glow" aria-hidden="true"></span>
-          <img
-            src="../Assets/images/profile/victor-avatar.png"
-            alt="Mlungisi Nxumalo"
-            class="profile-card__photo"
-            width="600"
-            height="750"
-            loading="eager"
-            decoding="async"
-          >
+          <picture>
+            <source
+              media="(max-width: 1023px)"
+              srcset="../Assets/images/profile/victor-avatar-mobile.webp"
+              type="image/webp"
+            >
+            <img
+              src="../Assets/images/profile/victor-avatar.png"
+              alt="Mlungisi Nxumalo"
+              class="profile-card__photo"
+              width="600"
+              height="750"
+              loading="eager"
+              decoding="async"
+            >
+          </picture>
         </div>
         <div class="profile-card__body">
           <span class="detail-profile__badge detail-profile__badge--edu">Graduate · NQF 7</span>

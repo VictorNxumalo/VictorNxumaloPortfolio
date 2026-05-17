@@ -54,7 +54,7 @@
   </nav>
 
   <div class="site-layout">
-    <aside class="profile-sticky reveal">
+    <aside class="profile-sticky profile-sticky--visible">
       <article class="profile-card" id="profileCard">
         <div class="profile-card__deco" aria-hidden="true">
           <svg viewBox="0 0 400 400" fill="none">
@@ -64,16 +64,23 @@
         </div>
         <div class="profile-card__photo-wrap">
           <span class="profile-card__glow" aria-hidden="true"></span>
-          <img
-            src="Assets/images/profile/victor-avatar.png"
-            alt="Mlungisi Nxumalo — IT graduate and software engineer"
-            class="profile-card__photo"
-            width="600"
-            height="750"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high"
-          >
+          <picture>
+            <source
+              media="(max-width: 1023px)"
+              srcset="Assets/images/profile/victor-avatar-mobile.webp"
+              type="image/webp"
+            >
+            <img
+              src="Assets/images/profile/victor-avatar.png"
+              alt="Mlungisi Nxumalo — IT graduate and software engineer"
+              class="profile-card__photo"
+              width="600"
+              height="750"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            >
+          </picture>
         </div>
         <div class="profile-card__body">
           <svg class="profile-flame" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 23c-3.9-2.3-7-5.5-7-10 0-4.5 3.5-8.5 7-11 3.5 2.5 7 6.5 7 11 0 4.5-3.1 7.7-7 10z"/></svg>
