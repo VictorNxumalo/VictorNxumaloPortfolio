@@ -41,8 +41,9 @@ function setupActiveNav() {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         const id = entry.target.id || "home";
-        document.querySelectorAll(".dock-nav a").forEach((a) => {
-          a.classList.toggle("is-active", a.getAttribute("data-nav") === id);
+        document.querySelectorAll(".dock-nav a, .mobile-drawer a").forEach((a) => {
+          const href = (a.getAttribute("href") || "").replace("#", "");
+          a.classList.toggle("is-active", href === id);
         });
       });
     },

@@ -12,7 +12,10 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.65rem 1rem;
-  padding: 1rem clamp(1.25rem, 4vw, 2rem);
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem clamp(1rem, 4vw, 2rem);
+  padding-top: max(1rem, env(safe-area-inset-top, 0px));
   background: rgba(10, 10, 10, 0.88);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(14px);
@@ -141,7 +144,10 @@
 
 .detail-hero__title {
   font-family: "Syne", sans-serif;
-  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-size: clamp(1.75rem, 8vw, 3rem);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   font-weight: 800;
   letter-spacing: -0.03em;
   margin: 0 0 0.5rem;
@@ -785,7 +791,33 @@ a.exp-card--edu:hover .exp-card__cta {
 }
 
 .page-experience-detail {
-  overflow-x: clip;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .detail-layout {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+
+  .detail-sidebar {
+    order: 2;
+    width: 100%;
+  }
+
+  .detail-content {
+    order: 1;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .detail-topbar__crumb {
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -116,7 +116,7 @@
 
   /* ── Parallax orbs + content drift ── */
   function initParallax() {
-    if (prefersReduced) return;
+    if (prefersReduced || window.innerWidth < 1024) return;
 
     const orbs = document.querySelectorAll("[data-parallax]");
     let sy = 0;

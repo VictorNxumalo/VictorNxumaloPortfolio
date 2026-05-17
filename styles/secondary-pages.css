@@ -1,6 +1,55 @@
 /* Classes & testimonials secondary pages */
 .page-secondary {
   --secondary-max: 960px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.detail-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 150;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem 1rem;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem clamp(1rem, 4vw, 2rem);
+  padding-top: max(1rem, env(safe-area-inset-top, 0px));
+  background: rgba(10, 10, 10, 0.88);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+}
+
+.detail-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.25s var(--ease);
+}
+
+.detail-topbar__crumb {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.4;
+  max-width: min(100%, 14rem);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .detail-topbar__crumb {
+    width: 100%;
+    max-width: none;
+    text-align: left;
+  }
 }
 
 .page-secondary .detail-eyebrow {
@@ -46,11 +95,14 @@
 
 .secondary-hero__title {
   font-family: "Syne", sans-serif;
-  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-size: clamp(1.75rem, 8vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   margin: 0 0 0.5rem;
   line-height: 1.05;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .secondary-hero__title .ghost {
