@@ -226,6 +226,11 @@
     const title = document.querySelector(".hero-title");
     if (!title) return;
 
+    if (window.innerWidth < 1024) {
+      title.style.fontSize = "";
+      return;
+    }
+
     const solid = title.querySelector(".line-solid");
     const ghost = title.querySelector(".line-ghost");
     if (!solid || !ghost) return;

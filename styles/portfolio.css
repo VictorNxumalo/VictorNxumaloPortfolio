@@ -27,15 +27,19 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   font-family: "DM Sans", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body::before {
@@ -147,6 +151,8 @@ img {
 /* Layout */
 .site-layout {
   width: min(100% - 1.5rem, var(--max));
+  max-width: 100%;
+  min-width: 0;
   margin-inline: auto;
   padding: calc(var(--dock-h) + 2.5rem) 0 4rem;
   display: grid;
@@ -164,6 +170,8 @@ img {
 /* Profile card */
 .profile-sticky {
   position: relative;
+  min-width: 0;
+  max-width: 100%;
 }
 
 @media (min-width: 1024px) {
@@ -344,13 +352,15 @@ img {
 /* Content column */
 .content-column {
   min-width: 0;
-  overflow: visible;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 /* Hero */
 .hero-block {
   margin-bottom: 4rem;
-  overflow: visible;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 .hero-headline {
@@ -360,14 +370,14 @@ img {
   max-width: 100%;
   margin: 0 0 1.5rem;
   isolation: isolate;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .hero-dust {
   position: absolute;
-  inset: -12% -4%;
-  width: 108%;
-  height: 124%;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
   pointer-events: none;
   opacity: 0.85;
@@ -399,10 +409,11 @@ img {
   overflow-wrap: anywhere;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 1024px) {
   .hero-title .line-solid,
   .hero-title .line-ghost {
     width: max-content;
+    max-width: 100%;
     white-space: nowrap;
   }
 }
@@ -1187,9 +1198,10 @@ article.project-card:hover {
 
 .exp-card {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 0 1.25rem;
   align-items: stretch;
+  min-width: 0;
 }
 
 .exp-card__rail {
@@ -1225,6 +1237,7 @@ article.project-card:hover {
 
 .exp-card__panel {
   position: relative;
+  min-width: 0;
   padding: clamp(1.25rem, 2.5vw, 1.75rem);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
@@ -1892,7 +1905,7 @@ a.exp-card--link .exp-card__panel {
   list-style: none;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .contact-highlights {
     grid-template-columns: 1fr;
   }
@@ -2741,6 +2754,106 @@ a.project-card:hover .project-card__cta:not(.project-card__cta--muted) {
 
 .float-cta a:hover {
   animation: none;
+}
+
+/* Mobile viewport — prevent horizontal bleed */
+@media (max-width: 1023px) {
+  .site-layout {
+    width: min(100% - 1.25rem, var(--max));
+    padding-top: calc(var(--dock-h) + 2rem);
+  }
+
+  .block--projects,
+  .block--experience,
+  .block--tools,
+  .block--contact,
+  .block--more {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-showcase,
+  .exp-timeline,
+  .tools-showcase {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 9vw, 3.25rem);
+  }
+
+  .section-heading {
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
+    overflow-wrap: anywhere;
+  }
+
+  .hero-metrics__cluster {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stat--wide {
+    grid-column: auto;
+  }
+
+  .contact-channel {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .dock-nav {
+    max-width: calc(100vw - 5.5rem);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .dock-nav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-layout {
+    width: min(100% - 1rem, var(--max));
+  }
+
+  .menu-toggle {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .dock-nav {
+    top: 1rem;
+    gap: 0.2rem;
+    padding: 0.4rem 0.5rem;
+  }
+
+  .dock-nav a {
+    width: 36px;
+    height: 36px;
+  }
+
+  .dock-nav svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .block--projects,
+  .block--experience,
+  .block--tools,
+  .block--contact {
+    padding: 1.15rem;
+  }
+
+  .exp-card__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .tools-cluster__grid,
+  .tools-cluster__grid--lead,
+  .tools-cluster__grid--compact {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Reduced motion */

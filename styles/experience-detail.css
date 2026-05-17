@@ -53,10 +53,13 @@
 .detail-layout {
   display: grid;
   gap: clamp(1.5rem, 4vw, 2.5rem);
-  max-width: var(--max);
+  width: min(100%, var(--max));
+  max-width: 100%;
+  min-width: 0;
   margin: 0 auto;
   padding: clamp(1.25rem, 4vw, 2rem) clamp(1.25rem, 4vw, 2rem) 5rem;
   align-items: start;
+  overflow-x: clip;
 }
 
 @media (min-width: 1024px) {
