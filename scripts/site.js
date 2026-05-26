@@ -155,6 +155,41 @@ function setupSubmitGlow() {
   });
 }
 
+function setupProjectVideos() {
+  document.querySelectorAll(".project-card__media--video").forEach((media) => {
+    const video = media.querySelector(".project-card__video");
+    const playBtn = media.querySelector(".project-card__play");
+    if (!video || !playBtn) return;
+
+    const toggle = () => {
+      if (video.paused) {
+        video.play();
+        media.classList.add("is-playing");
+        media.classList.remove("is-paused");
+      } else {
+        video.pause();
+        media.classList.add("is-paused");
+      }
+    };
+
+    playBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggle();
+    });
+
+    media.addEventListener("click", (e) => {
+      if (e.target.closest("a")) return;
+      toggle();
+    });
+
+    video.addEventListener("ended", () => {
+      media.classList.remove("is-playing", "is-paused");
+      video.currentTime = 0;
+    });
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   setupMobileMenu();
   setCurrentYear();
@@ -163,4 +198,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupCopyEmail();
   setupSubmitGlow();
   setupTestimonialModal();
+  setupProjectVideos();
 });

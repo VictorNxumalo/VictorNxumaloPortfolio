@@ -16,6 +16,9 @@ desktop.ini
 # Build & generated assets
 Assets/webp/
 
+# Source video files (too large for git)
+*.mov
+
 # Logs & env
 *.log
 .env

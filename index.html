@@ -191,10 +191,22 @@
 
         <div class="project-showcase" data-stagger data-stagger-child="fade-up">
           <div class="project-showcase__lead">
-          <article class="project-card project-card--featured project-card--accent-orange" data-animate="scale-up">
+          <article class="project-card project-card--featured project-card--accent-orange project-card--has-video" data-animate="scale-up">
             <span class="project-card__index" aria-hidden="true">01</span>
-            <div class="project-card__media project-card__media--logo-dark">
-              <img src="Assets/images/projects/evolve-logo.png" alt="EVOLVE esports platform logo" loading="lazy" decoding="async">
+            <div class="project-card__media project-card__media--video">
+              <img src="Assets/images/projects/evolve-logo.png" alt="EVOLVE esports platform logo" class="project-card__poster" loading="lazy" decoding="async">
+              <video
+                class="project-card__video"
+                src="Assets/videos/evolve-ad.mp4"
+                poster="Assets/images/projects/evolve-logo.png"
+                preload="metadata"
+                playsinline
+                loop
+                muted
+              ></video>
+              <button type="button" class="project-card__play" aria-label="Play EVOLVE ad">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
             </div>
             <div class="project-card__body">
               <div class="project-card__tags"><span>Esports</span><span>Full-Stack</span><span>Node.js</span></div>
