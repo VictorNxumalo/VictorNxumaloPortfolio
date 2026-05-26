@@ -190,7 +190,34 @@ function setupProjectVideos() {
   });
 }
 
+function setupPromoBanner() {
+  const banner = document.getElementById("promoBanner");
+  const closeBtn = document.getElementById("promoBannerClose");
+  const soundBtn = document.getElementById("promoBannerSound");
+  const video = banner?.querySelector(".promo-banner__video");
+  if (!banner) return;
+
+  if (sessionStorage.getItem("promo-dismissed") === "1") {
+    banner.classList.add("is-dismissed");
+    if (video) video.pause();
+    return;
+  }
+
+  closeBtn?.addEventListener("click", () => {
+    banner.classList.add("is-dismissed");
+    if (video) video.pause();
+    sessionStorage.setItem("promo-dismissed", "1");
+  });
+
+  soundBtn?.addEventListener("click", () => {
+    if (!video) return;
+    video.muted = !video.muted;
+    soundBtn.classList.toggle("is-unmuted", !video.muted);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  setupPromoBanner();
   setupMobileMenu();
   setCurrentYear();
   setupActiveNav();

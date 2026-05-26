@@ -15,6 +15,39 @@
   <link rel="stylesheet" href="styles/secondary-pages.css">
 </head>
 <body>
+  <section class="promo-banner" id="promoBanner">
+    <button type="button" class="promo-banner__close" id="promoBannerClose" aria-label="Dismiss banner">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <video
+      class="promo-banner__video"
+      src="Assets/videos/evolve-ad.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    ></video>
+    <div class="promo-banner__overlay" aria-hidden="true"></div>
+    <div class="promo-banner__content">
+      <span class="promo-banner__badge">New Project</span>
+      <h2 class="promo-banner__title">EVOLVE</h2>
+      <p class="promo-banner__tagline">Compete. Improve. Inspire.</p>
+      <p class="promo-banner__desc">A full-stack esports platform with tournament brackets, competitive play, and community — built with Node.js &amp; Supabase.</p>
+      <div class="promo-banner__actions">
+        <a href="https://stirring-capybara-9da21d.netlify.app/" target="_blank" rel="noopener noreferrer" class="promo-banner__btn promo-banner__btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+          Visit EVOLVE
+        </a>
+        <a href="#projects" class="promo-banner__btn promo-banner__btn--ghost">View all projects</a>
+      </div>
+      <button type="button" class="promo-banner__sound" id="promoBannerSound" aria-label="Unmute video">
+        <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+        <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"/></svg>
+      </button>
+    </div>
+  </section>
+
   <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__fill"></span></div>
   <div class="ambient-bg" aria-hidden="true">
     <div class="ambient-orb ambient-orb--orange" data-parallax="0.05"></div>
